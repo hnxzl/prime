@@ -699,12 +699,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Reduce animation complexity on low-end devices
-  if (
-    navigator.hardwareConcurrency &&
-    navigator.hardwareConcurrency <= 4
-  ) {
+  if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) {
     document.body.classList.add("reduce-animations");
-    
+
     // Disable heavy animations
     const style = document.createElement("style");
     style.textContent = `

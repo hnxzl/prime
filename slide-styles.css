@@ -3533,7 +3533,11 @@ body {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.05),
+    rgba(118, 75, 162, 0.05)
+  );
   padding: 2rem;
   border-radius: 15px;
   margin-bottom: 1.5rem;
@@ -3719,7 +3723,11 @@ body {
 }
 
 .wbs-level-1 {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
   padding: 1.5rem;
   border-radius: 12px;
   border-left: 4px solid #667eea;
@@ -3851,7 +3859,11 @@ body {
 }
 
 .critical-path-box {
-  background: linear-gradient(135deg, rgba(214, 48, 49, 0.1), rgba(231, 76, 60, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(214, 48, 49, 0.1),
+    rgba(231, 76, 60, 0.1)
+  );
   padding: 2rem;
   border-radius: 15px;
   border: 3px solid #d63031;
@@ -3953,7 +3965,11 @@ body {
 }
 
 .preview-note {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
   padding: 1.2rem;
   border-radius: 10px;
   color: #495057;
@@ -4064,7 +4080,11 @@ body {
 }
 
 .finding-card {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.05),
+    rgba(118, 75, 162, 0.05)
+  );
   padding: 2rem;
   border-radius: 15px;
   border: 3px solid #667eea;
@@ -4127,7 +4147,11 @@ body {
 }
 
 .metric-card {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
@@ -4203,7 +4227,11 @@ body {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.05),
+    rgba(118, 75, 162, 0.05)
+  );
   padding: 2.5rem;
   border-radius: 15px;
   border-left: 5px solid #667eea;
