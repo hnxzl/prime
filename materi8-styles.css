@@ -3,6 +3,15 @@
    Comparison VS Layout & New Sections
    ================================= */
 
+/* Performance Optimization */
+* {
+  will-change: auto;
+}
+
+.slide-page {
+  will-change: transform;
+}
+
 /* VS Comparison Container - Side by Side Boxes */
 .vs-comparison-container {
   display: flex;
@@ -16,22 +25,24 @@
   flex: 1;
   background: white;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid #2d3436;
+  will-change: transform;
 }
 
 .comparison-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .gantt-box {
-  border-top: 5px solid #3498db;
+  border-top: 6px solid #667eea;
 }
 
 .network-box {
-  border-top: 5px solid #e74c3c;
+  border-top: 6px solid #d63031;
 }
 
 .box-header {
@@ -96,20 +107,21 @@
 }
 
 .comparison-section h4 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  color: #2c3e50;
+  gap: 0.7rem;
+  color: #2d3436;
+  font-weight: 700;
 }
 
 .comparison-section.pros h4 {
-  color: #27ae60;
+  color: #00b894;
 }
 
 .comparison-section.cons h4 {
-  color: #e74c3c;
+  color: #d63031;
 }
 
 .comparison-section.use-case h4 {
@@ -122,25 +134,28 @@
 }
 
 .comparison-section ul li {
-  padding: 0.6rem 0;
-  padding-left: 1.5rem;
+  padding: 0.8rem 0;
+  padding-left: 1.8rem;
   position: relative;
-  line-height: 1.6;
-  color: #555;
+  line-height: 1.8;
+  color: #2d3436;
+  font-weight: 500;
 }
 
 .comparison-section ul li:before {
-  content: "•";
+  content: "●";
   position: absolute;
   left: 0;
-  color: #3498db;
+  color: #667eea;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .comparison-section.use-case p {
-  line-height: 1.8;
-  color: #555;
+  line-height: 1.9;
+  color: #2d3436;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 /* VS Divider Vertical */
@@ -182,42 +197,48 @@
 
 /* Recommendation Box */
 .recommendation-box {
-  background: linear-gradient(135deg, #fff3cd 0%, #fff9e6 100%);
-  border-left: 5px solid #f39c12;
-  padding: 2rem;
-  border-radius: 10px;
-  margin-top: 2rem;
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+  border: 3px solid #f39c12;
+  padding: 2.5rem;
+  border-radius: 15px;
+  margin-top: 3rem;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: flex-start;
+  box-shadow: 0 8px 20px rgba(243, 156, 18, 0.2);
 }
 
 .recommendation-box i {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #f39c12;
   flex-shrink: 0;
 }
 
 .recommendation-box h4 {
-  color: #d68910;
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
+  color: #2d3436;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .recommendation-box p {
-  line-height: 1.8;
-  color: #666;
+  line-height: 2;
+  color: #2d3436;
+  font-weight: 500;
+  font-size: 1.05rem;
 }
 
 /* Review Grid - Kesimpulan */
 .conclusion-intro {
   text-align: center;
   margin-bottom: 3rem;
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 1.15rem;
+  color: #2d3436;
+  font-weight: 500;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.8;
 }
 
 .review-grid {
@@ -230,10 +251,12 @@
 .review-card {
   background: white;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
-  border-top: 4px solid transparent;
+  border: 3px solid #2d3436;
+  border-top: 5px solid transparent;
+  will-change: transform;
 }
 
 .review-card:nth-child(1) {
@@ -280,15 +303,17 @@
 }
 
 .review-card h4 {
-  color: #2c3e50;
-  font-size: 1.2rem;
+  color: #2d3436;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .review-card p {
-  color: #666;
-  line-height: 1.7;
-  font-size: 0.95rem;
+  color: #495057;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /* Final Message */
@@ -353,24 +378,26 @@
 
 .reference-item {
   background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   gap: 1.5rem;
   transition: all 0.3s ease;
-  border-left: 4px solid #3498db;
+  border: 3px solid #2d3436;
+  border-left: 6px solid #667eea;
+  will-change: transform;
 }
 
 .reference-item:hover {
-  transform: translateX(5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .ref-number {
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border-radius: 50%;
@@ -378,7 +405,9 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  border: 3px solid #2d3436;
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
 }
 
 .ref-content {
@@ -386,20 +415,27 @@
 }
 
 .ref-link {
-  line-height: 1.7;
-  color: #444;
+  line-height: 1.8;
+  color: #2d3436;
   margin: 0;
+  font-weight: 500;
+}
+
+.ref-link em {
+  color: #667eea;
+  font-weight: 600;
 }
 
 .ref-link a {
-  color: #3498db;
+  color: #667eea;
   text-decoration: none;
-  word-break: break-all;
+  word-break: break-word;
   transition: color 0.3s ease;
+  font-weight: 600;
 }
 
 .ref-link a:hover {
-  color: #2980b9;
+  color: #764ba2;
   text-decoration: underline;
 }
 

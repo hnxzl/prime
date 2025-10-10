@@ -418,6 +418,7 @@ function showCriticalPath() {
 function showAllPaths() {
   const nodes = document.querySelectorAll(".network-node");
   const arrows = document.querySelectorAll(".dependency-arrow");
+  const info = document.getElementById("pathInfo");
 
   nodes.forEach((node) => {
     node.classList.remove("critical-highlight", "dimmed");
@@ -426,6 +427,22 @@ function showAllPaths() {
   arrows.forEach((arrow) => {
     arrow.classList.remove("highlighted", "dimmed");
   });
+
+  // Show all paths information
+  if (info) {
+    info.innerHTML = `
+      <h4>Informasi Jalur:</h4>
+      <div class="paths-list">
+        <div class="path-item">
+          <strong>Path 1:</strong> A → B → D → E = 47 hari
+        </div>
+        <div class="path-item critical-path-item">
+          <strong>Path 2 (CRITICAL):</strong> A → C → D → E = 52 hari
+          <span class="path-badge">Jalur Terpanjang</span>
+        </div>
+      </div>
+    `;
+  }
 }
 
 // Calculate Float
@@ -618,3 +635,104 @@ console.log("  ← / → : Navigate slides");
 console.log("  Home : Go to first slide");
 console.log("  End : Go to last slide");
 console.log("  M : Toggle menu");
+
+// ===================================
+// PERFORMANCE OPTIMIZATION
+// ===================================
+
+// Debounce function for performance
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Lazy load images and heavy content
+document.addEventListener("DOMContentLoaded", function () {
+  // Remove will-change after animations complete
+  const animatedElements = document.querySelectorAll(
+    "[class*='animate-'], .comparison-box, .review-card, .reference-item"
+  );
+
+  animatedElements.forEach((el) => {
+    el.addEventListener("animationend", function () {
+      this.style.willChange = "auto";
+    });
+
+    el.addEventListener("transitionend", function () {
+      this.style.willChange = "auto";
+    });
+  });
+
+  // Optimize Gantt Chart rendering
+  const ganttBars = document.querySelectorAll(".gantt-task-bar");
+  let animationStarted = false;
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !animationStarted) {
+        animationStarted = true;
+        ganttBars.forEach((bar, index) => {
+          setTimeout(() => {
+            bar.style.animation = "taskBarSlide 2s ease forwards";
+          }, index * 100);
+        });
+      }
+    });
+  }, observerOptions);
+
+  const ganttContainer = document.querySelector(".gantt-container");
+  if (ganttContainer) {
+    observer.observe(ganttContainer);
+  }
+
+  // Reduce animation complexity on low-end devices
+  if (
+    navigator.hardwareConcurrency &&
+    navigator.hardwareConcurrency <= 4
+  ) {
+    document.body.classList.add("reduce-animations");
+    
+    // Disable heavy animations
+    const style = document.createElement("style");
+    style.textContent = `
+      .reduce-animations * {
+        animation-duration: 0.5s !important;
+        transition-duration: 0.2s !important;
+      }
+      .reduce-animations @keyframes shimmer,
+      .reduce-animations @keyframes rotate,
+      .reduce-animations @keyframes completeGlow {
+        animation: none !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  // Optimize scroll performance
+  let ticking = false;
+  window.addEventListener(
+    "scroll",
+    debounce(() => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // Add scroll-based optimizations here
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, 100)
+  );
+});
