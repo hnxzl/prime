@@ -4354,6 +4354,22 @@ body {
   margin-bottom: 3rem;
 }
 
+/* Make section titles more prominent in Network Diagram */
+.network-slide .section-title {
+  background: linear-gradient(135deg, #667eea20, #764ba220);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  border: 3px solid #667eea;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+  margin-bottom: 2.5rem;
+}
+
+.network-slide .section-title.critical {
+  background: linear-gradient(135deg, #ffe5e5, #fff0f0);
+  border-color: #d63031;
+  box-shadow: 0 5px 15px rgba(214, 48, 49, 0.2);
+}
+
 .intro-card {
   background: var(--card-bg);
   border-radius: 20px;
