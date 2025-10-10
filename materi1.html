@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIME - Pengenalan</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="slide-styles.css" />
+  </head>
+  <body class="slide-page">
+    <!-- Menu Button -->
+    <button class="menu-button" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+      <div class="slide-number">Slide 2 / 9</div>
+      <div class="nav-arrows">
+        <button class="nav-arrow prev" onclick="location.href='index.html'">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow next" onclick="location.href='materi2.html'">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Slide Content -->
+    <div class="slide-container">
+      <div class="slide-content">
+        <div class="slide-header">
+          <h1 class="slide-title">
+            <i class="fas fa-lightbulb"></i>
+            Pengenalan Penjadwalan Proyek
+          </h1>
+          <p class="slide-subtitle">
+            Memahami Dasar dan Pentingnya Penjadwalan dalam Manajemen Proyek
+          </p>
+        </div>
+
+        <div class="content-grid">
+          <!-- Definition Section -->
+          <div class="info-card animate-fade-in">
+            <div class="card-icon definition">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3>Definisi</h3>
+            <p>
+              <strong>Penjadwalan Proyek</strong> adalah proses sistematis untuk
+              menentukan urutan dan waktu pelaksanaan aktivitas proyek, mulai
+              dari perencanaan hingga penyelesaian.
+            </p>
+            <div class="highlight-box">
+              <i class="fas fa-quote-left"></i>
+              <p class="quote">
+                "Proses penentuan kapan setiap aktivitas dimulai dan selesai"
+              </p>
+            </div>
+          </div>
+
+          <!-- Benefits Section -->
+          <div class="info-card animate-fade-in delay-1">
+            <div class="card-icon benefits">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3>Manfaat Utama</h3>
+            <ul class="benefit-list">
+              <li>
+                <i class="fas fa-dollar-sign"></i>
+                <div>
+                  <strong>Kontrol Biaya</strong>
+                  <p>Membantu mengalokasikan anggaran dengan lebih efektif</p>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-users-cog"></i>
+                <div>
+                  <strong>Efisiensi Sumber Daya</strong>
+                  <p>Optimalisasi penggunaan tim dan resources</p>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-eye"></i>
+                <div>
+                  <strong>Transparansi Stakeholder</strong>
+                  <p>Komunikasi yang jelas tentang progress proyek</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Why Critical Section -->
+        <div class="critical-section animate-slide-up delay-2">
+          <h2 class="section-title">
+            <i class="fas fa-exclamation-triangle"></i>
+            Mengapa Penjadwalan Krusial?
+          </h2>
+
+          <div class="factors-grid">
+            <div class="factor-card" onclick="toggleFactor(this)">
+              <div class="factor-header">
+                <i class="fas fa-puzzle-piece"></i>
+                <h4>Kompleksitas Proyek</h4>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+              </div>
+              <div class="factor-content">
+                <p>
+                  Proyek modern melibatkan banyak aktivitas yang saling terkait.
+                  Tanpa penjadwalan yang baik, risiko kegagalan meningkat
+                  drastis.
+                </p>
+                <div class="stat-box">
+                  <span class="stat-number">70%</span>
+                  <span class="stat-label"
+                    >Proyek gagal karena perencanaan buruk</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="factor-card" onclick="toggleFactor(this)">
+              <div class="factor-header">
+                <i class="fas fa-link"></i>
+                <h4>Ketergantungan Tugas</h4>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+              </div>
+              <div class="factor-content">
+                <p>
+                  Banyak tugas tidak bisa dimulai sebelum tugas lain selesai.
+                  Penjadwalan membantu mengidentifikasi dan mengelola
+                  dependencies.
+                </p>
+                <div class="dependency-example">
+                  <div class="dep-item">
+                    Design <i class="fas fa-arrow-right"></i>
+                  </div>
+                  <div class="dep-item">
+                    Development <i class="fas fa-arrow-right"></i>
+                  </div>
+                  <div class="dep-item">Testing</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="factor-card" onclick="toggleFactor(this)">
+              <div class="factor-header">
+                <i class="fas fa-clock"></i>
+                <h4>Time-to-Market</h4>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+              </div>
+              <div class="factor-content">
+                <p>
+                  Dalam dunia bisnis yang kompetitif, kecepatan adalah kunci.
+                  Penjadwalan yang efektif memastikan produk/layanan diluncurkan
+                  tepat waktu.
+                </p>
+                <div class="timeline-visual">
+                  <div class="timeline-point good">
+                    <i class="fas fa-check"></i>
+                    <span>Tepat Waktu</span>
+                  </div>
+                  <div class="timeline-point bad">
+                    <i class="fas fa-times"></i>
+                    <span>Terlambat = Lost Opportunity</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="factor-card" onclick="toggleFactor(this)">
+              <div class="factor-header">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h4>Budget Control</h4>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+              </div>
+              <div class="factor-content">
+                <p>
+                  Penundaan = biaya tambahan. Penjadwalan yang baik membantu
+                  menjaga proyek tetap dalam anggaran.
+                </p>
+                <div class="budget-comparison">
+                  <div class="budget-item on-track">
+                    <i class="fas fa-check-circle"></i>
+                    <span>On Schedule</span>
+                    <strong>100% Budget</strong>
+                  </div>
+                  <div class="budget-item delayed">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Delayed</span>
+                    <strong>120-150% Budget</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Quiz -->
+        <div class="quiz-section animate-fade-in delay-3">
+          <h3><i class="fas fa-question-circle"></i> Quick Check!</h3>
+          <div class="quiz-question">
+            <p>Apa manfaat utama dari penjadwalan proyek?</p>
+            <div class="quiz-options">
+              <button class="quiz-option" onclick="checkAnswer(this, false)">
+                Membuat proyek lebih rumit
+              </button>
+              <button class="quiz-option" onclick="checkAnswer(this, true)">
+                Kontrol biaya, efisiensi sumber daya, dan transparansi
+              </button>
+              <button class="quiz-option" onclick="checkAnswer(this, false)">
+                Mengurangi jumlah tim yang dibutuhkan
+              </button>
+            </div>
+            <div class="quiz-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Menu -->
+    <div class="slide-menu" id="slideMenu">
+      <div class="menu-header">
+        <h3>Daftar Materi</h3>
+        <button class="close-menu" onclick="toggleMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="menu-items">
+        <li class="menu-item">
+          <a href="index.html">
+            <span class="menu-item-number">0</span>
+            <span>Cover - Penjadwalan Proyek</span>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="materi1.html">
+            <span class="menu-item-number">1</span>
+            <span>Pengenalan Penjadwalan</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi2.html">
+            <span class="menu-item-number">2</span>
+            <span>Langkah Awal Penjadwalan</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi3.html">
+            <span class="menu-item-number">3</span>
+            <span>Work Breakdown Structure</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi4.html">
+            <span class="menu-item-number">4</span>
+            <span>Metode Penjadwalan</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi5.html">
+            <span class="menu-item-number">5</span>
+            <span>Gantt Chart</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi6.html">
+            <span class="menu-item-number">6</span>
+            <span>Network Diagram</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi7.html">
+            <span class="menu-item-number">7</span>
+            <span>Studi Kasus E-Commerce</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi8.html">
+            <span class="menu-item-number">8</span>
+            <span>Kesimpulan & Penutup</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Animate cards on scroll
+      window.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll(
+          ".info-card, .critical-section"
+        );
+        cards.forEach((card) => {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        });
+      });
+
+      // Toggle menu
+      function toggleMenu() {
+        const menu = document.getElementById("slideMenu");
+        menu.classList.toggle("active");
+      }
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (e) {
+        const menu = document.getElementById("slideMenu");
+        const menuButton = document.querySelector(".menu-button");
+
+        if (!menu.contains(e.target) && !menuButton.contains(e.target)) {
+          menu.classList.remove("active");
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") {
+          window.location.href = "index.html";
+        } else if (e.key === "ArrowRight" || e.key === " ") {
+          e.preventDefault();
+          window.location.href = "materi2.html";
+        } else if (e.key === "m" || e.key === "M") {
+          toggleMenu();
+        } else if (e.key === "Escape") {
+          document.getElementById("slideMenu").classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

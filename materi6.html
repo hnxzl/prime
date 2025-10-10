@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIME - Network Diagram</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="slide-styles.css" />
+  </head>
+  <body class="slide-page">
+    <!-- Menu Button -->
+    <button class="menu-button" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+      <div class="slide-number">Slide 7 / 9</div>
+      <div class="nav-arrows">
+        <button class="nav-arrow prev" onclick="location.href='materi5.html'">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow next" onclick="location.href='materi7.html'">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Slide Content -->
+    <div class="slide-container">
+      <div class="slide-content network-slide">
+        <div class="slide-header">
+          <h1 class="slide-title">
+            <i class="fas fa-project-diagram"></i>
+            Network Diagram
+          </h1>
+          <p class="slide-subtitle">Analisis Jalur Kritis dan Dependencies</p>
+        </div>
+
+        <!-- Definition -->
+        <div class="network-intro animate-fade-in">
+          <div class="intro-card">
+            <div class="intro-icon">
+              <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="intro-content">
+              <h3>Apa itu Network Diagram?</h3>
+              <p>
+                Network Diagram adalah <strong>representasi grafis</strong> dari
+                aktivitas proyek dan hubungan logis (dependencies) di antaranya.
+                Diagram ini membantu mengidentifikasi
+                <strong>critical path</strong> dan menganalisis schedule.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Types of Network Diagram -->
+        <div class="network-types animate-slide-up delay-1">
+          <h2 class="section-title">
+            <i class="fas fa-layer-group"></i>
+            Jenis Network Diagram
+          </h2>
+
+          <div class="types-grid">
+            <div class="type-card aon-card">
+              <div class="type-header">
+                <h3>AON (Activity on Node)</h3>
+                <span class="type-badge popular">Paling Populer</span>
+              </div>
+              <div class="type-content">
+                <p>
+                  Aktivitas direpresentasikan sebagai
+                  <strong>node (kotak)</strong>, dan dependencies sebagai
+                  <strong>panah</strong> yang menghubungkan node.
+                </p>
+                <div class="diagram-example">
+                  <div class="node-example">
+                    <div class="node">A</div>
+                    <div class="arrow">→</div>
+                    <div class="node">B</div>
+                    <div class="arrow">→</div>
+                    <div class="node">C</div>
+                  </div>
+                </div>
+                <ul class="type-features">
+                  <li><i class="fas fa-check"></i> Lebih mudah dipahami</li>
+                  <li>
+                    <i class="fas fa-check"></i> Digunakan di MS Project,
+                    Primavera
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Support berbagai jenis
+                    dependencies
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="type-card aoa-card">
+              <div class="type-header">
+                <h3>AOA (Activity on Arrow)</h3>
+                <span class="type-badge classic">Classic</span>
+              </div>
+              <div class="type-content">
+                <p>
+                  Aktivitas direpresentasikan sebagai <strong>panah</strong>,
+                  dan node sebagai <strong>event</strong> (start/finish).
+                </p>
+                <div class="diagram-example">
+                  <div class="aoa-example">
+                    <div class="event">①</div>
+                    <div class="arrow-label">─A→</div>
+                    <div class="event">②</div>
+                    <div class="arrow-label">─B→</div>
+                    <div class="event">③</div>
+                  </div>
+                </div>
+                <ul class="type-features">
+                  <li><i class="fas fa-info"></i> Metode lama (PERT, CPM)</li>
+                  <li>
+                    <i class="fas fa-info"></i> Memerlukan dummy activities
+                  </li>
+                  <li><i class="fas fa-info"></i> Kurang fleksibel</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Creating Network Diagram Steps -->
+        <div class="creation-steps animate-slide-left delay-2">
+          <h2 class="section-title">
+            <i class="fas fa-list-ol"></i>
+            Langkah Pembuatan Network Diagram
+          </h2>
+
+          <div class="steps-timeline">
+            <div class="timeline-step">
+              <div class="step-marker">1</div>
+              <div class="step-content">
+                <h4>Identifikasi Aktivitas</h4>
+                <p>List semua aktivitas dari WBS</p>
+              </div>
+            </div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-step">
+              <div class="step-marker">2</div>
+              <div class="step-content">
+                <h4>Tentukan Dependencies</h4>
+                <p>Analisis hubungan antar aktivitas</p>
+              </div>
+            </div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-step">
+              <div class="step-marker">3</div>
+              <div class="step-content">
+                <h4>Estimasi Durasi</h4>
+                <p>Tetapkan durasi setiap aktivitas</p>
+              </div>
+            </div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-step">
+              <div class="step-marker">4</div>
+              <div class="step-content">
+                <h4>Gambar Diagram</h4>
+                <p>Susun node dan hubungkan</p>
+              </div>
+            </div>
+            <div class="timeline-connector"></div>
+            <div class="timeline-step">
+              <div class="step-marker">5</div>
+              <div class="step-content">
+                <h4>Hitung Critical Path</h4>
+                <p>Forward & Backward Pass</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Components -->
+        <div class="key-components animate-fade-in delay-3">
+          <h2 class="section-title">
+            <i class="fas fa-puzzle-piece"></i>
+            Komponen Kunci Network Diagram
+          </h2>
+
+          <div class="components-grid">
+            <div class="component-card">
+              <div class="component-icon es">ES</div>
+              <h4>Early Start (ES)</h4>
+              <p>Waktu paling awal aktivitas bisa dimulai</p>
+            </div>
+
+            <div class="component-card">
+              <div class="component-icon ef">EF</div>
+              <h4>Early Finish (EF)</h4>
+              <p>Waktu paling awal aktivitas bisa selesai (ES + Duration)</p>
+            </div>
+
+            <div class="component-card">
+              <div class="component-icon ls">LS</div>
+              <h4>Late Start (LS)</h4>
+              <p>Waktu paling lambat aktivitas harus dimulai</p>
+            </div>
+
+            <div class="component-card">
+              <div class="component-icon lf">LF</div>
+              <h4>Late Finish (LF)</h4>
+              <p>Waktu paling lambat aktivitas harus selesai</p>
+            </div>
+
+            <div class="component-card highlight">
+              <div class="component-icon float">Float</div>
+              <h4>Float / Slack</h4>
+              <p>Waktu kelonggaran: LS - ES atau LF - EF</p>
+              <div class="formula-box">
+                <code>Float = LS - ES = LF - EF</code>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Critical Path Explanation -->
+        <div class="critical-path-section animate-slide-up delay-4">
+          <h2 class="section-title critical">
+            <i class="fas fa-exclamation-circle"></i>
+            Critical Path (Jalur Kritis)
+          </h2>
+
+          <div class="critical-explanation">
+            <div class="explanation-box">
+              <h3>Definisi</h3>
+              <p>
+                <strong>Critical Path</strong> adalah jalur terpanjang melalui
+                network diagram yang menentukan
+                <strong>durasi minimum proyek</strong>. Aktivitas pada critical
+                path memiliki <strong>float = 0</strong>, artinya tidak ada
+                kelonggaran waktu.
+              </p>
+            </div>
+
+            <div class="importance-grid">
+              <div class="importance-card">
+                <i class="fas fa-clock"></i>
+                <h4>Menentukan Durasi</h4>
+                <p>Durasi critical path = durasi total proyek</p>
+              </div>
+              <div class="importance-card">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h4>High Risk</h4>
+                <p>Delay di critical path = delay seluruh proyek</p>
+              </div>
+              <div class="importance-card">
+                <i class="fas fa-crosshairs"></i>
+                <h4>Focus Area</h4>
+                <p>Prioritas monitoring dan resource allocation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Network Diagram Simulator -->
+        <div class="network-simulator animate-fade-in delay-5">
+          <h2 class="section-title">
+            <i class="fas fa-play-circle"></i>
+            Simulasi Network Diagram - Proyek E-commerce
+          </h2>
+
+          <div class="simulator-controls">
+            <button class="sim-btn" onclick="showCriticalPath()">
+              <i class="fas fa-route"></i> Tampilkan Critical Path
+            </button>
+            <button class="sim-btn" onclick="showAllPaths()">
+              <i class="fas fa-project-diagram"></i> Tampilkan Semua Jalur
+            </button>
+            <button class="sim-btn" onclick="calculateFloat()">
+              <i class="fas fa-calculator"></i> Hitung Float
+            </button>
+          </div>
+
+          <div class="network-canvas">
+            <svg width="100%" height="500" viewBox="0 0 1200 500">
+              <!-- Node A: Design -->
+              <g class="network-node" data-node="A">
+                <rect
+                  x="50"
+                  y="200"
+                  width="150"
+                  height="100"
+                  rx="5"
+                  class="node-box"
+                />
+                <text x="125" y="235" class="node-label">Design & UI/UX</text>
+                <text x="125" y="255" class="node-duration">12 hari</text>
+                <text x="70" y="220" class="node-es">ES: 0</text>
+                <text x="160" y="220" class="node-ef">EF: 12</text>
+                <text x="70" y="290" class="node-ls">LS: 0</text>
+                <text x="160" y="290" class="node-lf">LF: 12</text>
+              </g>
+
+              <!-- Node B: Frontend -->
+              <g class="network-node" data-node="B">
+                <rect
+                  x="300"
+                  y="100"
+                  width="150"
+                  height="100"
+                  rx="5"
+                  class="node-box"
+                />
+                <text x="375" y="135" class="node-label">Frontend Dev</text>
+                <text x="375" y="155" class="node-duration">20 hari</text>
+                <text x="320" y="120" class="node-es">ES: 12</text>
+                <text x="410" y="120" class="node-ef">EF: 32</text>
+                <text x="320" y="190" class="node-ls">LS: 12</text>
+                <text x="410" y="190" class="node-lf">LF: 32</text>
+              </g>
+
+              <!-- Node C: Backend -->
+              <g class="network-node" data-node="C">
+                <rect
+                  x="300"
+                  y="300"
+                  width="150"
+                  height="100"
+                  rx="5"
+                  class="node-box"
+                />
+                <text x="375" y="335" class="node-label">Backend Dev</text>
+                <text x="375" y="355" class="node-duration">25 hari</text>
+                <text x="320" y="320" class="node-es">ES: 12</text>
+                <text x="410" y="320" class="node-ef">EF: 37</text>
+                <text x="320" y="390" class="node-ls">LS: 12</text>
+                <text x="410" y="390" class="node-lf">LF: 37</text>
+              </g>
+
+              <!-- Node D: Testing -->
+              <g class="network-node" data-node="D">
+                <rect
+                  x="550"
+                  y="200"
+                  width="150"
+                  height="100"
+                  rx="5"
+                  class="node-box"
+                />
+                <text x="625" y="235" class="node-label">Testing & QA</text>
+                <text x="625" y="255" class="node-duration">10 hari</text>
+                <text x="570" y="220" class="node-es">ES: 37</text>
+                <text x="660" y="220" class="node-ef">EF: 47</text>
+                <text x="570" y="290" class="node-ls">LS: 37</text>
+                <text x="660" y="290" class="node-lf">LF: 47</text>
+              </g>
+
+              <!-- Node E: Deployment -->
+              <g class="network-node" data-node="E">
+                <rect
+                  x="800"
+                  y="200"
+                  width="150"
+                  height="100"
+                  rx="5"
+                  class="node-box"
+                />
+                <text x="875" y="235" class="node-label">Deployment</text>
+                <text x="875" y="255" class="node-duration">5 hari</text>
+                <text x="820" y="220" class="node-es">ES: 47</text>
+                <text x="910" y="220" class="node-ef">EF: 52</text>
+                <text x="820" y="290" class="node-ls">LS: 47</text>
+                <text x="910" y="290" class="node-lf">LF: 52</text>
+              </g>
+
+              <!-- Arrows (Dependencies) -->
+              <defs>
+                <marker
+                  id="arrowhead"
+                  markerWidth="10"
+                  markerHeight="10"
+                  refX="9"
+                  refY="3"
+                  orient="auto"
+                >
+                  <polygon points="0 0, 10 3, 0 6" fill="#2C3E50" />
+                </marker>
+                <marker
+                  id="arrowhead-critical"
+                  markerWidth="10"
+                  markerHeight="10"
+                  refX="9"
+                  refY="3"
+                  orient="auto"
+                >
+                  <polygon points="0 0, 10 3, 0 6" fill="#E74C3C" />
+                </marker>
+              </defs>
+
+              <!-- A to B -->
+              <line
+                x1="200"
+                y1="230"
+                x2="300"
+                y2="150"
+                class="dependency-arrow"
+                marker-end="url(#arrowhead)"
+              />
+              <!-- A to C -->
+              <line
+                x1="200"
+                y1="270"
+                x2="300"
+                y2="350"
+                class="dependency-arrow"
+                marker-end="url(#arrowhead)"
+              />
+              <!-- B to D -->
+              <line
+                x1="450"
+                y1="150"
+                x2="550"
+                y2="230"
+                class="dependency-arrow"
+                marker-end="url(#arrowhead)"
+              />
+              <!-- C to D -->
+              <line
+                x1="450"
+                y1="350"
+                x2="550"
+                y2="270"
+                class="dependency-arrow critical-arrow"
+                marker-end="url(#arrowhead-critical)"
+              />
+              <!-- D to E -->
+              <line
+                x1="700"
+                y1="250"
+                x2="800"
+                y2="250"
+                class="dependency-arrow critical-arrow"
+                marker-end="url(#arrowhead-critical)"
+              />
+            </svg>
+          </div>
+
+          <div class="path-info" id="pathInfo">
+            <h4>Informasi Jalur:</h4>
+            <div class="paths-list">
+              <div class="path-item">
+                <strong>Path 1:</strong> A → B → D → E = 47 hari
+              </div>
+              <div class="path-item critical-path-item">
+                <strong>Path 2 (CRITICAL):</strong> A → C → D → E = 52 hari
+                <span class="path-badge">Jalur Terpanjang</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="network-summary animate-fade-in delay-6">
+          <div class="summary-box">
+            <i class="fas fa-key"></i>
+            <div>
+              <h3>Key Takeaway</h3>
+              <p>
+                Network Diagram memberikan
+                <strong>analisis mendalam</strong> tentang dependencies dan
+                critical path. Sangat penting untuk
+                <strong>perencanaan teknis</strong> dan
+                <strong>optimasi schedule</strong>, terutama pada proyek
+                kompleks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Menu -->
+    <div class="slide-menu" id="slideMenu">
+      <div class="menu-header">
+        <h3>Daftar Materi</h3>
+        <button class="close-menu" onclick="toggleMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="menu-items">
+        <li class="menu-item">
+          <a href="index.html"
+            ><span class="menu-item-number">0</span
+            ><span>Cover - Penjadwalan Proyek</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi1.html"
+            ><span class="menu-item-number">1</span
+            ><span>Pengenalan Penjadwalan</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi2.html"
+            ><span class="menu-item-number">2</span
+            ><span>Langkah Awal Penjadwalan</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi3.html"
+            ><span class="menu-item-number">3</span
+            ><span>Work Breakdown Structure</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi4.html"
+            ><span class="menu-item-number">4</span
+            ><span>Metode Penjadwalan</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi5.html"
+            ><span class="menu-item-number">5</span><span>Gantt Chart</span></a
+          >
+        </li>
+        <li class="menu-item active">
+          <a href="materi6.html"
+            ><span class="menu-item-number">6</span
+            ><span>Network Diagram</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi7.html"
+            ><span class="menu-item-number">7</span
+            ><span>Studi Kasus E-Commerce</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi8.html"
+            ><span class="menu-item-number">8</span
+            ><span>Kesimpulan & Penutup</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") window.location.href = "materi5.html";
+        else if (e.key === "ArrowRight" || e.key === " ") {
+          e.preventDefault();
+          window.location.href = "materi7.html";
+        } else if (e.key === "m" || e.key === "M") toggleMenu();
+        else if (e.key === "Escape")
+          document.getElementById("slideMenu").classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

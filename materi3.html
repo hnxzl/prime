@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIME - WBS Interaktif</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="slide-styles.css" />
+  </head>
+  <body class="slide-page">
+    <!-- Menu Button -->
+    <button class="menu-button" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+      <div class="slide-number">Slide 4 / 9</div>
+      <div class="nav-arrows">
+        <button class="nav-arrow prev" onclick="location.href='materi2.html'">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow next" onclick="location.href='materi4.html'">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Slide Content -->
+    <div class="slide-container">
+      <div class="slide-content">
+        <div class="slide-header">
+          <h1 class="slide-title">
+            <i class="fas fa-sitemap"></i>
+            Work Breakdown Structure (WBS)
+          </h1>
+          <p class="slide-subtitle">
+            Dekomposisi Hierarkis Proyek Menjadi Work Packages
+          </p>
+        </div>
+
+        <!-- WBS Concept -->
+        <div class="wbs-concept">
+          <div class="concept-grid">
+            <div class="concept-card animate-fade-in">
+              <div class="concept-icon">
+                <i class="fas fa-book"></i>
+              </div>
+              <h3>Definisi WBS</h3>
+              <p>
+                WBS adalah <strong>dekomposisi hierarkis</strong> dari total
+                scope proyek menjadi work packages yang lebih kecil dan mudah
+                dikelola.
+              </p>
+              <div class="quote-box">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                  "Memecah pekerjaan besar menjadi bagian-bagian yang dapat
+                  dikerjakan"
+                </p>
+              </div>
+            </div>
+
+            <div class="concept-card animate-fade-in delay-1">
+              <div class="concept-icon">
+                <i class="fas fa-percent"></i>
+              </div>
+              <h3>100% Rule</h3>
+              <p>
+                WBS harus mencakup <strong>100% pekerjaan</strong> yang
+                didefinisikan dalam scope proyek.
+              </p>
+              <div class="rule-visual">
+                <div class="pie-chart">
+                  <div class="pie-segment" style="--percentage: 100">100%</div>
+                </div>
+                <p class="rule-note">Tidak boleh kurang, tidak boleh lebih</p>
+              </div>
+            </div>
+
+            <div class="concept-card animate-fade-in delay-2">
+              <div class="concept-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <h3>Hierarki Level</h3>
+              <p>
+                WBS terorganisir dalam <strong>level hierarkis</strong> dari
+                umum ke spesifik.
+              </p>
+              <div class="hierarchy-example">
+                <div class="level" style="width: 100%">Level 1: Project</div>
+                <div class="level" style="width: 80%">Level 2: Phases</div>
+                <div class="level" style="width: 60%">
+                  Level 3: Deliverables
+                </div>
+                <div class="level" style="width: 40%">
+                  Level 4: Work Packages
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive WBS Simulator -->
+        <div class="wbs-simulator animate-slide-up delay-3">
+          <h2 class="section-title">
+            <i class="fas fa-mouse-pointer"></i>
+            Simulasi WBS: Proyek Website E-commerce
+          </h2>
+          <p class="simulator-desc">
+            Klik pada setiap node untuk expand/collapse detail work package
+          </p>
+
+          <div class="wbs-tree">
+            <!-- Level 0: Project -->
+            <div class="wbs-node level-0" onclick="toggleWBS(this)">
+              <div class="node-content project">
+                <i class="fas fa-shopping-cart node-icon"></i>
+                <span class="node-label">Website E-commerce</span>
+                <i class="fas fa-chevron-down toggle-icon"></i>
+              </div>
+
+              <div class="wbs-children">
+                <!-- Level 1: Major Deliverables -->
+                <div
+                  class="wbs-node level-1"
+                  onclick="toggleWBS(this); event.stopPropagation();"
+                >
+                  <div class="node-content deliverable">
+                    <i class="fas fa-paint-brush node-icon"></i>
+                    <span class="node-label">1. Design & UI/UX</span>
+                    <span class="node-duration">12 hari</span>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                  </div>
+                  <div class="wbs-children">
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-pencil-ruler node-icon"></i>
+                        <span class="node-label">1.1 Wireframe</span>
+                        <span class="node-duration">3 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-palette node-icon"></i>
+                        <span class="node-label">1.2 UI Design</span>
+                        <span class="node-duration">5 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-mobile-alt node-icon"></i>
+                        <span class="node-label">1.3 Responsive Design</span>
+                        <span class="node-duration">4 hari</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="wbs-node level-1"
+                  onclick="toggleWBS(this); event.stopPropagation();"
+                >
+                  <div class="node-content deliverable">
+                    <i class="fas fa-code node-icon"></i>
+                    <span class="node-label">2. Frontend Development</span>
+                    <span class="node-duration">20 hari</span>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                  </div>
+                  <div class="wbs-children">
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-home node-icon"></i>
+                        <span class="node-label">2.1 Homepage</span>
+                        <span class="node-duration">5 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-th node-icon"></i>
+                        <span class="node-label">2.2 Product Catalog</span>
+                        <span class="node-duration">7 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-shopping-bag node-icon"></i>
+                        <span class="node-label">2.3 Shopping Cart</span>
+                        <span class="node-duration">5 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-credit-card node-icon"></i>
+                        <span class="node-label">2.4 Checkout Page</span>
+                        <span class="node-duration">3 hari</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="wbs-node level-1"
+                  onclick="toggleWBS(this); event.stopPropagation();"
+                >
+                  <div class="node-content deliverable">
+                    <i class="fas fa-server node-icon"></i>
+                    <span class="node-label">3. Backend Development</span>
+                    <span class="node-duration">25 hari</span>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                  </div>
+                  <div class="wbs-children">
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-database node-icon"></i>
+                        <span class="node-label">3.1 Database Design</span>
+                        <span class="node-duration">5 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-plug node-icon"></i>
+                        <span class="node-label">3.2 API Development</span>
+                        <span class="node-duration">10 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-user-lock node-icon"></i>
+                        <span class="node-label"
+                          >3.3 Authentication System</span
+                        >
+                        <span class="node-duration">6 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-money-check-alt node-icon"></i>
+                        <span class="node-label">3.4 Payment Gateway</span>
+                        <span class="node-duration">4 hari</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="wbs-node level-1"
+                  onclick="toggleWBS(this); event.stopPropagation();"
+                >
+                  <div class="node-content deliverable">
+                    <i class="fas fa-vial node-icon"></i>
+                    <span class="node-label">4. Testing & QA</span>
+                    <span class="node-duration">10 hari</span>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                  </div>
+                  <div class="wbs-children">
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-flask node-icon"></i>
+                        <span class="node-label">4.1 Unit Testing</span>
+                        <span class="node-duration">3 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-network-wired node-icon"></i>
+                        <span class="node-label">4.2 Integration Testing</span>
+                        <span class="node-duration">4 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-users node-icon"></i>
+                        <span class="node-label"
+                          >4.3 User Acceptance Testing</span
+                        >
+                        <span class="node-duration">3 hari</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="wbs-node level-1"
+                  onclick="toggleWBS(this); event.stopPropagation();"
+                >
+                  <div class="node-content deliverable">
+                    <i class="fas fa-rocket node-icon"></i>
+                    <span class="node-label">5. Deployment</span>
+                    <span class="node-duration">5 hari</span>
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                  </div>
+                  <div class="wbs-children">
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-cloud-upload-alt node-icon"></i>
+                        <span class="node-label">5.1 Server Setup</span>
+                        <span class="node-duration">2 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-upload node-icon"></i>
+                        <span class="node-label"
+                          >5.2 Production Deployment</span
+                        >
+                        <span class="node-duration">2 hari</span>
+                      </div>
+                    </div>
+                    <div class="wbs-node level-2">
+                      <div class="node-content work-package">
+                        <i class="fas fa-chart-line node-icon"></i>
+                        <span class="node-label">5.3 Monitoring Setup</span>
+                        <span class="node-duration">1 hari</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wbs-actions">
+            <button class="action-btn expand-all" onclick="expandAllWBS()">
+              <i class="fas fa-expand-alt"></i> Expand All
+            </button>
+            <button class="action-btn collapse-all" onclick="collapseAllWBS()">
+              <i class="fas fa-compress-alt"></i> Collapse All
+            </button>
+          </div>
+        </div>
+
+        <!-- WBS Statistics -->
+        <div class="wbs-stats animate-fade-in delay-4">
+          <h3><i class="fas fa-chart-pie"></i> Statistik WBS</h3>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+              <div class="stat-value">5</div>
+              <div class="stat-label">Major Deliverables</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-tasks"></i></div>
+              <div class="stat-value">17</div>
+              <div class="stat-label">Work Packages</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+              <div class="stat-value">72</div>
+              <div class="stat-label">Total Days</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fas fa-check-double"></i></div>
+              <div class="stat-value">100%</div>
+              <div class="stat-label">Scope Coverage</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Menu -->
+    <div class="slide-menu" id="slideMenu">
+      <div class="menu-header">
+        <h3>Daftar Materi</h3>
+        <button class="close-menu" onclick="toggleMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="menu-items">
+        <li class="menu-item">
+          <a href="index.html">
+            <span class="menu-item-number">0</span>
+            <span>Cover - Penjadwalan Proyek</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi1.html">
+            <span class="menu-item-number">1</span>
+            <span>Pengenalan Penjadwalan</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi2.html">
+            <span class="menu-item-number">2</span>
+            <span>Langkah Awal Penjadwalan</span>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="materi3.html">
+            <span class="menu-item-number">3</span>
+            <span>Work Breakdown Structure</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi4.html">
+            <span class="menu-item-number">4</span>
+            <span>Metode Penjadwalan</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi5.html">
+            <span class="menu-item-number">5</span>
+            <span>Gantt Chart</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi6.html">
+            <span class="menu-item-number">6</span>
+            <span>Network Diagram</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi7.html">
+            <span class="menu-item-number">7</span>
+            <span>Studi Kasus E-Commerce</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi8.html">
+            <span class="menu-item-number">8</span>
+            <span>Kesimpulan & Penutup</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Keyboard navigation
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") {
+          window.location.href = "materi2.html";
+        } else if (e.key === "ArrowRight" || e.key === " ") {
+          e.preventDefault();
+          window.location.href = "materi4.html";
+        } else if (e.key === "m" || e.key === "M") {
+          toggleMenu();
+        } else if (e.key === "Escape") {
+          document.getElementById("slideMenu").classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

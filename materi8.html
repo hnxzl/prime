@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIME - Kesimpulan & Lampiran</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="slide-styles.css" />
+    <link rel="stylesheet" href="materi8-styles.css" />
+  </head>
+  <body class="slide-page">
+    <!-- Menu Button -->
+    <button class="menu-button" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+      <div class="slide-number">Slide 9 / 9</div>
+      <div class="nav-arrows">
+        <button class="nav-arrow prev" onclick="location.href='materi7.html'">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow next" disabled>
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Slide Content -->
+    <div class="slide-container">
+      <div class="slide-content">
+        <div class="slide-header">
+          <h1 class="slide-title">
+            <i class="fas fa-flag-checkered"></i>
+            Kesimpulan & Lampiran
+          </h1>
+          <p class="slide-subtitle">Ringkasan Pembelajaran dan Referensi</p>
+        </div>
+
+        <!-- Comparison: Gantt vs Network -->
+        <div class="comparison-final animate-fade-in">
+          <h2 class="section-title">
+            <i class="fas fa-balance-scale-right"></i>
+            Perbandingan: Gantt Chart vs Network Diagram
+          </h2>
+
+          <div class="vs-comparison-container">
+            <!-- Left Box: Gantt Chart -->
+            <div class="comparison-box gantt-box">
+              <div class="box-header">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Gantt Chart</h3>
+                <span class="tag visual-tag">Visual-Oriented</span>
+              </div>
+              <div class="box-body">
+                <div class="comparison-section pros">
+                  <h4><i class="fas fa-check-circle"></i> Kelebihan</h4>
+                  <ul>
+                    <li>Mudah dipahami stakeholder</li>
+                    <li>Timeline visual yang jelas</li>
+                    <li>Progress tracking sederhana</li>
+                    <li>Presentasi yang menarik</li>
+                    <li>Ideal untuk komunikasi non-teknis</li>
+                  </ul>
+                </div>
+                <div class="comparison-section cons">
+                  <h4><i class="fas fa-times-circle"></i> Kekurangan</h4>
+                  <ul>
+                    <li>Dependencies tidak eksplisit</li>
+                    <li>Sulit untuk proyek kompleks</li>
+                    <li>Analisis jalur kritis terbatas</li>
+                    <li>Tidak menunjukkan float/slack</li>
+                  </ul>
+                </div>
+                <div class="comparison-section use-case">
+                  <h4><i class="fas fa-star"></i> Kapan Digunakan</h4>
+                  <p>
+                    Komunikasi dengan stakeholder non-teknis, presentasi
+                    executive, tracking progress visual, laporan status proyek
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- VS Divider -->
+            <div class="vs-divider-vertical">
+              <span class="vs-text">VS</span>
+            </div>
+
+            <!-- Right Box: Network Diagram -->
+            <div class="comparison-box network-box">
+              <div class="box-header">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Network Diagram</h3>
+                <span class="tag analytical-tag">Analysis-Oriented</span>
+              </div>
+              <div class="box-body">
+                <div class="comparison-section pros">
+                  <h4><i class="fas fa-check-circle"></i> Kelebihan</h4>
+                  <ul>
+                    <li>Dependencies sangat jelas</li>
+                    <li>Analisis jalur kritis akurat</li>
+                    <li>Float/slack calculation</li>
+                    <li>Optimal untuk perencanaan</li>
+                    <li>Identifikasi risiko schedule</li>
+                  </ul>
+                </div>
+                <div class="comparison-section cons">
+                  <h4><i class="fas fa-times-circle"></i> Kekurangan</h4>
+                  <ul>
+                    <li>Learning curve lebih tinggi</li>
+                    <li>Kurang intuitif visual</li>
+                    <li>Sulit dijelaskan ke non-PM</li>
+                    <li>Membutuhkan pemahaman teknis</li>
+                  </ul>
+                </div>
+                <div class="comparison-section use-case">
+                  <h4><i class="fas fa-star"></i> Kapan Digunakan</h4>
+                  <p>
+                    Perencanaan teknis, optimasi schedule, identifikasi risiko,
+                    proyek kompleks dengan banyak dependencies, analisis what-if
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recommendation-box">
+            <i class="fas fa-lightbulb"></i>
+            <div>
+              <h4>Rekomendasi: Gunakan Keduanya!</h4>
+              <p>
+                Network Diagram untuk <strong>perencanaan dan analisis</strong>,
+                Gantt Chart untuk <strong>komunikasi dan tracking</strong>.
+                Kombinasi keduanya memberikan hasil terbaik dalam manajemen
+                proyek modern.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Learnings / Kesimpulan -->
+        <div class="key-learnings animate-slide-up delay-1">
+          <h2 class="section-title">
+            <i class="fas fa-clipboard-check"></i>
+            Kesimpulan & Review Materi
+          </h2>
+
+          <div class="conclusion-intro">
+            <p>
+              Berikut adalah ringkasan poin-poin kunci yang telah dibahas dalam
+              presentasi PRIME mengenai penjadwalan proyek:
+            </p>
+          </div>
+
+          <div class="review-grid">
+            <div class="review-card">
+              <div class="review-icon">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <h4>Pentingnya Penjadwalan</h4>
+              <p>
+                Penjadwalan proyek adalah fondasi kesuksesan yang membantu
+                kontrol biaya, efisiensi sumber daya, dan transparansi kepada
+                stakeholder.
+              </p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-icon">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <h4>6 Tahap Pra-Analisis</h4>
+              <p>
+                Define Scope → Map Dependencies → Estimate Durations → Allocate
+                Resources → Optimize Timeline → Assign Tasks sebagai fondasi
+                sebelum membuat diagram.
+              </p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-icon">
+                <i class="fas fa-sitemap"></i>
+              </div>
+              <h4>WBS & 100% Rule</h4>
+              <p>
+                Work Breakdown Structure melakukan dekomposisi hierarkis yang
+                mencakup 100% scope proyek tanpa kurang atau lebih.
+              </p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-icon">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <h4>PERT Estimation</h4>
+              <p>
+                Three-point estimation dengan rumus (O + 4M + P) / 6 membantu
+                mengatasi ketidakpastian dalam estimasi durasi aktivitas.
+              </p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h4>Gantt Chart</h4>
+              <p>
+                Visual timeline yang mudah dipahami, ideal untuk tracking
+                progress dan komunikasi dengan stakeholder non-teknis.
+              </p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-icon">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <h4>Network Diagram</h4>
+              <p>
+                Menampilkan dependencies eksplisit dan memungkinkan analisis
+                jalur kritis serta perhitungan float untuk optimasi schedule.
+              </p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+              <h4>Critical Path</h4>
+              <p>
+                Jalur terpanjang yang menentukan durasi minimum proyek. Delay
+                pada critical path berarti delay seluruh proyek.
+              </p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>PRIME Integration</h4>
+              <p>
+                Integrasi WBS, PERT, Network Diagram, dan Gantt Chart
+                menciptakan sistem penjadwalan yang comprehensive dan excellent.
+              </p>
+            </div>
+          </div>
+
+          <div class="final-message">
+            <i class="fas fa-quote-left"></i>
+            <p>
+              "Penjadwalan yang efektif bukan hanya tentang membuat timeline,
+              tetapi tentang memahami dependencies, mengidentifikasi risiko, dan
+              mengoptimalkan resources untuk mencapai tujuan proyek tepat waktu
+              dan sesuai budget."
+            </p>
+          </div>
+        </div>
+
+        <!-- References -->
+        <div class="references animate-fade-in delay-2">
+          <h2 class="section-title">
+            <i class="fas fa-book-open"></i>
+            Daftar Pustaka
+          </h2>
+
+          <div class="references-list">
+            <div class="reference-item">
+              <div class="ref-number">1</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Slack. (2024).
+                  <em>Project Scheduling Made Simple: A Complete Guide.</em>
+                  Slack Blog.
+                  <a
+                    href="https://slack.com/blog/productivity/project-scheduling-made-simple-a-complete-guide"
+                    target="_blank"
+                    >https://slack.com/blog/productivity/project-scheduling-made-simple-a-complete-guide</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">2</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Widyatama University Repository.
+                  <em>Project Scheduling Documentation.</em>
+                  <a
+                    href="https://repository.widyatama.ac.id/server/api/core/bitstreams/597749cd-859c-41cd-be93-b888f6f305d4/content"
+                    target="_blank"
+                    >Repository Link</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">3</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Literasi Sains Journal. <em>Metode Penjadwalan Proyek.</em>
+                  <a
+                    href="https://journal.literasisains.id/index.php/storage/article/view/3139/1464"
+                    target="_blank"
+                    >https://journal.literasisains.id/index.php/storage/article/view/3139/1464</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">4</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Scribd. (2019). <em>Metode Penjadwalan.</em>
+                  <a
+                    href="https://www.scribd.com/document/419770358/METODE-PENJADWALAN"
+                    target="_blank"
+                    >https://www.scribd.com/document/419770358/METODE-PENJADWALAN</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">5</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Asana. (2024). <em>Gantt Chart Basics.</em> Asana Resources.
+                  <a
+                    href="https://asana.com/resources/gantt-chart-basics"
+                    target="_blank"
+                    >https://asana.com/resources/gantt-chart-basics</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">6</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  ProjectManager.com. <em>Network Diagrams: Free Tools.</em>
+                  <a
+                    href="https://www.projectmanager.com/blog/network-diagrams-free-tools"
+                    target="_blank"
+                    >https://www.projectmanager.com/blog/network-diagrams-free-tools</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">7</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Atlassian. (2024). <em>Work Breakdown Structure.</em>
+                  <a
+                    href="https://www.atlassian.com/work-management/project-management/work-breakdown-structure"
+                    target="_blank"
+                    >https://www.atlassian.com/work-management/project-management/work-breakdown-structure</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">8</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Project Management Institute (PMI).
+                  <em>PMBOK Guide Standards.</em>
+                  <a href="https://www.pmi.org/standards/pmbok" target="_blank"
+                    >https://www.pmi.org/standards/pmbok</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">9</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  PMI. <em>Practice Standard for Scheduling.</em>
+                  <a
+                    href="https://www.pmi.org/learning/library/new-pmi-practice-standard-scheduling-7210"
+                    target="_blank"
+                    >https://www.pmi.org/learning/library/new-pmi-practice-standard-scheduling-7210</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">10</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Smartsheet. <em>Critical Path Method.</em>
+                  <a
+                    href="https://www.smartsheet.com/critical-path-method"
+                    target="_blank"
+                    >https://www.smartsheet.com/critical-path-method</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">11</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  University of Mustansiriyah.
+                  <em>Project Management Lecture Notes.</em>
+                  <a
+                    href="https://uomustansiriyah.edu.iq/media/lectures/5/5_2018_01_09!02_39_54_PM.pdf"
+                    target="_blank"
+                    >PDF Link</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">12</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  PMI.
+                  <em>Critical Path Method Calculations and Scheduling.</em>
+                  <a
+                    href="https://www.pmi.org/learning/library/critical-path-method-calculations-scheduling-8040"
+                    target="_blank"
+                    >Library Article</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">13</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Atlassian. (2024). <em>Gantt Chart Guide.</em>
+                  <a
+                    href="https://www.atlassian.com/agile/project-management/gantt-chart"
+                    target="_blank"
+                    >https://www.atlassian.com/agile/project-management/gantt-chart</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">14</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  ProjectManager.com. <em>Gantt Chart Guides.</em>
+                  <a
+                    href="https://www.projectmanager.com/guides/gantt-chart"
+                    target="_blank"
+                    >https://www.projectmanager.com/guides/gantt-chart</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">15</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Project Management Academy.
+                  <em>Crash Schedule vs Fast Tracking.</em>
+                  <a
+                    href="https://projectmanagementacademy.net/resources/blog/crash-schedule-vs-fast-tracking/"
+                    target="_blank"
+                    >Blog Article</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">16</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Brainbok. <em>Crashing vs Fast Tracking.</em>
+                  <a
+                    href="https://www.brainbok.com/guide/pm-study-notes/crashing-vs-fast-tracking/"
+                    target="_blank"
+                    >https://www.brainbok.com/guide/pm-study-notes/crashing-vs-fast-tracking/</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">17</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  CBT Nuggets.
+                  <em>PM Software Showdown: Project vs JIRA vs Asana.</em>
+                  <a
+                    href="https://www.cbtnuggets.com/blog/certifications/microsoft/pm-software-showdown-project-vs-jira-asana"
+                    target="_blank"
+                    >Blog Post</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">18</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  Red Star Techs.
+                  <em
+                    >Project Management Tools Comparison: JIRA, Trello,
+                    Asana.</em
+                  >
+                  <a
+                    href="https://redstartechs.com/blog/project-management-tools-comparison-jira-trello-asana-etc"
+                    target="_blank"
+                    >Comparison Article</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">19</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  YouTube - Project Management Tutorial.
+                  <a
+                    href="https://www.youtube.com/watch?v=L-Fj5vspTD0"
+                    target="_blank"
+                    >Video Tutorial 1</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">20</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  YouTube - Gantt Chart Explained.
+                  <a
+                    href="https://www.youtube.com/watch?v=SfPWjTeu1rI"
+                    target="_blank"
+                    >Video Tutorial 2</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">21</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  YouTube - Network Diagram Guide.
+                  <a
+                    href="https://www.youtube.com/watch?v=LlIATeAm2NU"
+                    target="_blank"
+                    >Video Tutorial 3</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="reference-item">
+              <div class="ref-number">22</div>
+              <div class="ref-content">
+                <p class="ref-link">
+                  YouTube - Critical Path Method.
+                  <a
+                    href="https://www.youtube.com/watch?v=OWk6Obdul8k"
+                    target="_blank"
+                    >Video Tutorial 4</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thank You Section -->
+        <div class="thankyou-section animate-zoom-in delay-3">
+          <div class="thankyou-content">
+            <i class="fas fa-heart"></i>
+            <h2>Terima Kasih!</h2>
+            <p class="presentation-title">Presentasi PRIME - Kelompok 4</p>
+            <p class="subtitle">
+              Penjadwalan Proyek: Gantt Chart dan Network Diagram
+            </p>
+
+            <div class="team-credits">
+              <h3>Anggota Kelompok 4</h3>
+              <div class="members-list">
+                <div class="member-item">
+                  <i class="fas fa-user-graduate"></i>
+                  <div class="member-info">
+                    <span class="member-name">Annisa Nurul Hikmah</span>
+                    <span class="member-nim">22552011232</span>
+                  </div>
+                </div>
+                <div class="member-item">
+                  <i class="fas fa-user-graduate"></i>
+                  <div class="member-info">
+                    <span class="member-name">Deniera Rafiu Farras Hady</span>
+                    <span class="member-nim">23552012010</span>
+                  </div>
+                </div>
+                <div class="member-item">
+                  <i class="fas fa-user-graduate"></i>
+                  <div class="member-info">
+                    <span class="member-name">Evi Fauziah</span>
+                    <span class="member-nim">22552011246</span>
+                  </div>
+                </div>
+                <div class="member-item">
+                  <i class="fas fa-user-graduate"></i>
+                  <div class="member-info">
+                    <span class="member-name">Ezra Ben H</span>
+                    <span class="member-nim">22552011038</span>
+                  </div>
+                </div>
+                <div class="member-item">
+                  <i class="fas fa-user-graduate"></i>
+                  <div class="member-info">
+                    <span class="member-name">Gin Gin Ginaldi</span>
+                    <span class="member-nim">22552011208</span>
+                  </div>
+                </div>
+                <div class="member-item">
+                  <i class="fas fa-user-graduate"></i>
+                  <div class="member-info">
+                    <span class="member-name">Noufal Zaidaan A Q A</span>
+                    <span class="member-nim">22552011060</span>
+                  </div>
+                </div>
+                <div class="member-item">
+                  <i class="fas fa-user-graduate"></i>
+                  <div class="member-info">
+                    <span class="member-name">Nurul Setianingtyas Raharjo</span>
+                    <span class="member-nim">22552011176</span>
+                  </div>
+                </div>
+                <div class="member-item">
+                  <i class="fas fa-user-graduate"></i>
+                  <div class="member-info">
+                    <span class="member-name">Pedrik Dendi Aparel</span>
+                    <span class="member-nim">24552012016</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gratitude-message">
+              <p>
+                <i class="fas fa-quote-left"></i> Terima kasih atas perhatian
+                dan kesempatan untuk mempresentasikan materi tentang penjadwalan
+                proyek. Semoga presentasi ini bermanfaat dalam memahami
+                pentingnya Gantt Chart dan Network Diagram dalam manajemen
+                proyek. <i class="fas fa-quote-right"></i>
+              </p>
+            </div>
+
+            <div class="action-buttons">
+              <button
+                class="action-btn primary"
+                onclick="location.href='index.html'"
+              >
+                <i class="fas fa-home"></i> Kembali ke Awal
+              </button>
+              <button class="action-btn secondary" onclick="window.print()">
+                <i class="fas fa-print"></i> Print Materi
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Menu -->
+    <button class="slide-menu-btn" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="slide-menu" id="slideMenu">
+      <div class="menu-header">
+        <h3>Daftar Materi</h3>
+        <button class="close-menu" onclick="toggleMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="menu-list">
+        <li>
+          <a href="index.html"><span>0</span> Landing Page</a>
+        </li>
+        <li>
+          <a href="materi1.html"><span>1</span> Pengenalan</a>
+        </li>
+        <li>
+          <a href="materi2.html"><span>2</span> Langkah Awal</a>
+        </li>
+        <li>
+          <a href="materi3.html"><span>3</span> WBS Interaktif</a>
+        </li>
+        <li>
+          <a href="materi4.html"><span>4</span> Metode Penjadwalan</a>
+        </li>
+        <li>
+          <a href="materi5.html"><span>5</span> Gantt Chart</a>
+        </li>
+        <li>
+          <a href="materi6.html"><span>6</span> Network Diagram</a>
+        </li>
+        <li>
+          <a href="materi7.html"><span>7</span> Studi Kasus E-commerce</a>
+        </li>
+        <li class="active">
+          <a href="materi8.html"><span>8</span> Kesimpulan & Lampiran</a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

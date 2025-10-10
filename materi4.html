@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIME - Metode Penjadwalan</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="slide-styles.css" />
+  </head>
+  <body class="slide-page">
+    <!-- Menu Button -->
+    <button class="menu-button" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+      <div class="slide-number">Slide 5 / 9</div>
+      <div class="nav-arrows">
+        <button class="nav-arrow prev" onclick="location.href='materi3.html'">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow next" onclick="location.href='materi5.html'">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Slide Content -->
+    <div class="slide-container">
+      <div class="slide-content">
+        <div class="slide-header">
+          <h1 class="slide-title">
+            <i class="fas fa-chart-bar"></i>
+            Metode Penjadwalan Proyek
+          </h1>
+          <p class="slide-subtitle">
+            Tinjauan Berbagai Teknik dan Tools Penjadwalan
+          </p>
+        </div>
+
+        <!-- Methods Overview -->
+        <div class="methods-grid">
+          <!-- Bar Chart Method -->
+          <div class="method-card visual animate-slide-left">
+            <div class="method-header">
+              <div class="method-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h3>Bar Chart (Gantt Chart)</h3>
+              <span class="method-tag visual-tag">Visual</span>
+            </div>
+            <div class="method-content">
+              <p class="method-desc">
+                Representasi visual timeline proyek menggunakan bar horizontal.
+              </p>
+              <div class="method-features">
+                <h4>Kelebihan:</h4>
+                <ul>
+                  <li><i class="fas fa-check"></i> Mudah dipahami</li>
+                  <li><i class="fas fa-check"></i> Visual yang jelas</li>
+                  <li><i class="fas fa-check"></i> Tracking progress mudah</li>
+                </ul>
+                <h4>Kekurangan:</h4>
+                <ul>
+                  <li>
+                    <i class="fas fa-times"></i> Sulit menunjukkan dependencies
+                  </li>
+                  <li>
+                    <i class="fas fa-times"></i> Tidak ideal untuk proyek
+                    kompleks
+                  </li>
+                </ul>
+              </div>
+              <div class="mini-visual">
+                <div class="mini-bar" style="width: 60%"></div>
+                <div class="mini-bar" style="width: 40%"></div>
+                <div class="mini-bar" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Network Diagram Method -->
+          <div class="method-card analytical animate-slide-right">
+            <div class="method-header">
+              <div class="method-icon">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <h3>Network Diagram</h3>
+              <span class="method-tag analytical-tag">Analitis</span>
+            </div>
+            <div class="method-content">
+              <p class="method-desc">
+                Diagram jaringan yang menunjukkan hubungan dan dependensi antar
+                aktivitas.
+              </p>
+              <div class="method-features">
+                <h4>Teknik:</h4>
+                <ul>
+                  <li>
+                    <i class="fas fa-arrow-right"></i> <strong>CPM</strong> -
+                    Critical Path Method
+                  </li>
+                  <li>
+                    <i class="fas fa-arrow-right"></i> <strong>PDM</strong> -
+                    Precedence Diagramming Method
+                  </li>
+                  <li>
+                    <i class="fas fa-arrow-right"></i> <strong>PERT</strong> -
+                    Program Evaluation Review Technique
+                  </li>
+                </ul>
+                <h4>Best For:</h4>
+                <ul>
+                  <li>
+                    <i class="fas fa-check"></i> Proyek kompleks dengan banyak
+                    dependencies
+                  </li>
+                  <li><i class="fas fa-check"></i> Analisis jalur kritis</li>
+                </ul>
+              </div>
+              <div class="mini-visual network">
+                <div class="mini-node">A</div>
+                <div class="mini-arrow">→</div>
+                <div class="mini-node">B</div>
+                <div class="mini-arrow">→</div>
+                <div class="mini-node">C</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Linear Method -->
+          <div class="method-card linear animate-slide-left delay-1">
+            <div class="method-header">
+              <div class="method-icon">
+                <i class="fas fa-level-up-alt"></i>
+              </div>
+              <h3>Line of Balance (LOB)</h3>
+              <span class="method-tag linear-tag">Linear</span>
+            </div>
+            <div class="method-content">
+              <p class="method-desc">
+                Metode untuk proyek repetitif dengan unit-unit yang serupa.
+              </p>
+              <div class="method-features">
+                <h4>Cocok Untuk:</h4>
+                <ul>
+                  <li>
+                    <i class="fas fa-building"></i> Konstruksi gedung bertingkat
+                  </li>
+                  <li><i class="fas fa-industry"></i> Manufaktur massal</li>
+                  <li><i class="fas fa-home"></i> Perumahan serial</li>
+                </ul>
+                <h4>Keunggulan:</h4>
+                <ul>
+                  <li>
+                    <i class="fas fa-check"></i> Visualisasi progress per unit
+                  </li>
+                  <li><i class="fas fa-check"></i> Balance workload tim</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERT Estimation Section -->
+        <div class="pert-section animate-fade-in delay-2">
+          <h2 class="section-title">
+            <i class="fas fa-calculator"></i>
+            PERT: Three-Point Estimation
+          </h2>
+          <p class="section-desc">
+            Teknik estimasi yang memperhitungkan ketidakpastian dengan
+            menggunakan tiga skenario waktu
+          </p>
+
+          <div class="pert-formula-container">
+            <div class="formula-explanation">
+              <h3>Rumus PERT</h3>
+              <div class="formula-box">
+                <div class="formula">
+                  <span class="formula-label">Expected Time (TE) =</span>
+                  <div class="fraction">
+                    <div class="numerator">O + 4M + P</div>
+                    <div class="denominator">6</div>
+                  </div>
+                </div>
+              </div>
+              <div class="formula-legend">
+                <div class="legend-item">
+                  <span class="legend-symbol">O</span>
+                  <span class="legend-label">Optimistic (waktu terbaik)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-symbol">M</span>
+                  <span class="legend-label"
+                    >Most Likely (waktu paling mungkin)</span
+                  >
+                </div>
+                <div class="legend-item">
+                  <span class="legend-symbol">P</span>
+                  <span class="legend-label">Pessimistic (waktu terburuk)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive PERT Calculator -->
+            <div class="pert-calculator">
+              <h3><i class="fas fa-desktop"></i> Kalkulator PERT Interaktif</h3>
+              <div class="calculator-form">
+                <div class="input-group">
+                  <label for="optimistic">
+                    <i class="fas fa-smile"></i> Optimistic (O)
+                  </label>
+                  <div class="input-wrapper">
+                    <input
+                      type="number"
+                      id="optimistic"
+                      placeholder="Contoh: 5"
+                      min="0"
+                      step="0.5"
+                    />
+                    <span class="unit">hari</span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="mostlikely">
+                    <i class="fas fa-equals"></i> Most Likely (M)
+                  </label>
+                  <div class="input-wrapper">
+                    <input
+                      type="number"
+                      id="mostlikely"
+                      placeholder="Contoh: 7"
+                      min="0"
+                      step="0.5"
+                    />
+                    <span class="unit">hari</span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="pessimistic">
+                    <i class="fas fa-frown"></i> Pessimistic (P)
+                  </label>
+                  <div class="input-wrapper">
+                    <input
+                      type="number"
+                      id="pessimistic"
+                      placeholder="Contoh: 12"
+                      min="0"
+                      step="0.5"
+                    />
+                    <span class="unit">hari</span>
+                  </div>
+                </div>
+
+                <button class="calculate-btn" onclick="calculatePERT()">
+                  <i class="fas fa-calculator"></i> Hitung Expected Time
+                </button>
+
+                <div
+                  class="result-container"
+                  id="pertResult"
+                  style="display: none"
+                >
+                  <div class="result-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Hasil Perhitungan</h4>
+                  </div>
+                  <div class="calculation-steps" id="calculationSteps"></div>
+                  <div class="result-value">
+                    <span class="result-label">Expected Time:</span>
+                    <span class="result-number" id="resultValue">0</span>
+                    <span class="result-unit">hari</span>
+                  </div>
+                  <div class="standard-deviation">
+                    <span class="sd-label">Standard Deviation (σ):</span>
+                    <span class="sd-value" id="sdValue">0</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Example Cases -->
+              <div class="example-cases">
+                <p class="example-label">
+                  <i class="fas fa-lightbulb"></i> Coba Contoh Kasus:
+                </p>
+                <div class="example-buttons">
+                  <button class="example-btn" onclick="loadExample(5, 7, 12)">
+                    Contoh 1: Frontend Dev
+                  </button>
+                  <button class="example-btn" onclick="loadExample(3, 5, 10)">
+                    Contoh 2: Database Design
+                  </button>
+                  <button class="example-btn" onclick="loadExample(2, 4, 6)">
+                    Contoh 3: Testing
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Method Comparison -->
+        <div class="comparison-section animate-slide-up delay-3">
+          <h3><i class="fas fa-balance-scale"></i> Perbandingan Metode</h3>
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Aspek</th>
+                  <th>Bar Chart</th>
+                  <th>Network Diagram</th>
+                  <th>LOB</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Kompleksitas</strong></td>
+                  <td><span class="level low">Rendah</span></td>
+                  <td><span class="level high">Tinggi</span></td>
+                  <td><span class="level medium">Sedang</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Dependencies</strong></td>
+                  <td><span class="level low">Terbatas</span></td>
+                  <td><span class="level high">Excellent</span></td>
+                  <td><span class="level medium">Good</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Visual Appeal</strong></td>
+                  <td><span class="level high">Tinggi</span></td>
+                  <td><span class="level medium">Sedang</span></td>
+                  <td><span class="level high">Tinggi</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Analisis Kritis</strong></td>
+                  <td><span class="level low">Tidak</span></td>
+                  <td><span class="level high">Ya</span></td>
+                  <td><span class="level medium">Terbatas</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Learning Curve</strong></td>
+                  <td><span class="level low">Mudah</span></td>
+                  <td><span class="level high">Sulit</span></td>
+                  <td><span class="level medium">Sedang</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Key Takeaway -->
+        <div class="takeaway-box animate-fade-in delay-4">
+          <i class="fas fa-key"></i>
+          <div class="takeaway-content">
+            <h4>Key Takeaway</h4>
+            <p>
+              Pilih metode berdasarkan <strong>kompleksitas proyek</strong> dan
+              <strong>kebutuhan analisis</strong>. Untuk proyek sederhana: Bar
+              Chart. Untuk proyek kompleks dengan banyak dependencies: Network
+              Diagram. Untuk proyek repetitif: LOB.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Menu -->
+    <div class="slide-menu" id="slideMenu">
+      <div class="menu-header">
+        <h3>Daftar Materi</h3>
+        <button class="close-menu" onclick="toggleMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="menu-items">
+        <li class="menu-item">
+          <a href="index.html">
+            <span class="menu-item-number">0</span>
+            <span>Cover - Penjadwalan Proyek</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi1.html">
+            <span class="menu-item-number">1</span>
+            <span>Pengenalan Penjadwalan</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi2.html">
+            <span class="menu-item-number">2</span>
+            <span>Langkah Awal Penjadwalan</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi3.html">
+            <span class="menu-item-number">3</span>
+            <span>Work Breakdown Structure</span>
+          </a>
+        </li>
+        <li class="menu-item active">
+          <a href="materi4.html">
+            <span class="menu-item-number">4</span>
+            <span>Metode Penjadwalan</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi5.html">
+            <span class="menu-item-number">5</span>
+            <span>Gantt Chart</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi6.html">
+            <span class="menu-item-number">6</span>
+            <span>Network Diagram</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi7.html">
+            <span class="menu-item-number">7</span>
+            <span>Studi Kasus E-Commerce</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="materi8.html">
+            <span class="menu-item-number">8</span>
+            <span>Kesimpulan & Penutup</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") window.location.href = "materi3.html";
+        else if (e.key === "ArrowRight" || e.key === " ") {
+          e.preventDefault();
+          window.location.href = "materi5.html";
+        } else if (e.key === "m" || e.key === "M") toggleMenu();
+        else if (e.key === "Escape")
+          document.getElementById("slideMenu").classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

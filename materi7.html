@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIME - Studi Kasus E-commerce</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="slide-styles.css" />
+  </head>
+  <body class="slide-page">
+    <!-- Menu Button -->
+    <button class="menu-button" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+      <div class="slide-number">Slide 8 / 9</div>
+      <div class="nav-arrows">
+        <button class="nav-arrow prev" onclick="location.href='materi6.html'">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow next" onclick="location.href='materi8.html'">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Slide Content -->
+    <div class="slide-container">
+      <div class="slide-content case-study-slide">
+        <div class="slide-header">
+          <h1 class="slide-title">
+            <i class="fas fa-briefcase"></i>
+            Studi Kasus: Website E-commerce
+          </h1>
+          <p class="slide-subtitle">
+            Integrasi PRIME: WBS, PERT, Network Diagram, dan Gantt Chart
+          </p>
+        </div>
+
+        <!-- Project Overview -->
+        <div class="project-overview animate-fade-in">
+          <div class="overview-header">
+            <i class="fas fa-shopping-cart"></i>
+            <h2>Project: Pengembangan Website E-commerce</h2>
+          </div>
+          <div class="overview-grid">
+            <div class="overview-item">
+              <strong>Client:</strong>
+              <span>PT. Digital Commerce Indonesia</span>
+            </div>
+            <div class="overview-item">
+              <strong>Budget:</strong>
+              <span>Rp 500.000.000</span>
+            </div>
+            <div class="overview-item">
+              <strong>Timeline:</strong>
+              <span>72 hari kerja (±3 bulan)</span>
+            </div>
+            <div class="overview-item">
+              <strong>Team Size:</strong>
+              <span>12 orang</span>
+            </div>
+          </div>
+          <div class="project-scope">
+            <h4>Scope:</h4>
+            <p>
+              Membangun platform e-commerce full-stack dengan fitur catalog,
+              shopping cart, payment gateway, dan admin panel.
+            </p>
+          </div>
+        </div>
+
+        <!-- PRIME Integration Flow -->
+        <div class="prime-integration animate-slide-up delay-1">
+          <h2 class="section-title">
+            <i class="fas fa-star"></i>
+            Implementasi PRIME Methodology
+          </h2>
+
+          <div class="integration-flow">
+            <!-- Step 1: WBS -->
+            <div class="integration-step">
+              <div class="step-badge">1</div>
+              <div class="step-icon wbs">
+                <i class="fas fa-sitemap"></i>
+              </div>
+              <div class="step-details">
+                <h3>Work Breakdown Structure (WBS)</h3>
+                <p>
+                  Dekomposisi proyek menjadi 5 major deliverables dan 17 work
+                  packages
+                </p>
+                <button class="view-detail-btn" onclick="showWBSDetail()">
+                  <i class="fas fa-eye"></i> Lihat WBS
+                </button>
+              </div>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+
+            <!-- Step 2: PERT Estimation -->
+            <div class="integration-step">
+              <div class="step-badge">2</div>
+              <div class="step-icon pert">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <div class="step-details">
+                <h3>PERT Estimation</h3>
+                <p>Three-point estimation untuk setiap work package</p>
+                <button class="view-detail-btn" onclick="showPERTDetail()">
+                  <i class="fas fa-eye"></i> Lihat Estimasi
+                </button>
+              </div>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+
+            <!-- Step 3: Network Diagram -->
+            <div class="integration-step">
+              <div class="step-badge">3</div>
+              <div class="step-icon network">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <div class="step-details">
+                <h3>Network Diagram & Critical Path</h3>
+                <p>Analisis dependencies dan identifikasi jalur kritis</p>
+                <button class="view-detail-btn" onclick="showNetworkDetail()">
+                  <i class="fas fa-eye"></i> Lihat Network
+                </button>
+              </div>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+
+            <!-- Step 4: Gantt Chart -->
+            <div class="integration-step">
+              <div class="step-badge">4</div>
+              <div class="step-icon gantt">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <div class="step-details">
+                <h3>Gantt Chart Visualization</h3>
+                <p>Timeline visual untuk stakeholder dan tracking</p>
+                <button class="view-detail-btn" onclick="showGanttDetail()">
+                  <i class="fas fa-eye"></i> Lihat Gantt
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed View Sections (Initially Hidden) -->
+        <div class="detail-section" id="wbsDetail" style="display: none">
+          <div class="detail-header">
+            <h3><i class="fas fa-sitemap"></i> WBS Detail</h3>
+            <button class="close-detail" onclick="closeDetail('wbsDetail')">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="wbs-compact">
+            <div class="wbs-level-1">
+              <strong>1. Design & UI/UX (12 hari)</strong>
+              <ul>
+                <li>1.1 Wireframe - 3 hari</li>
+                <li>1.2 UI Design - 5 hari</li>
+                <li>1.3 Responsive Design - 4 hari</li>
+              </ul>
+            </div>
+            <div class="wbs-level-1">
+              <strong>2. Frontend Development (20 hari)</strong>
+              <ul>
+                <li>2.1 Homepage - 5 hari</li>
+                <li>2.2 Product Catalog - 7 hari</li>
+                <li>2.3 Shopping Cart - 5 hari</li>
+                <li>2.4 Checkout Page - 3 hari</li>
+              </ul>
+            </div>
+            <div class="wbs-level-1">
+              <strong>3. Backend Development (25 hari)</strong>
+              <ul>
+                <li>3.1 Database Design - 5 hari</li>
+                <li>3.2 API Development - 10 hari</li>
+                <li>3.3 Authentication - 6 hari</li>
+                <li>3.4 Payment Gateway - 4 hari</li>
+              </ul>
+            </div>
+            <div class="wbs-level-1">
+              <strong>4. Testing & QA (10 hari)</strong>
+              <ul>
+                <li>4.1 Unit Testing - 3 hari</li>
+                <li>4.2 Integration Testing - 4 hari</li>
+                <li>4.3 UAT - 3 hari</li>
+              </ul>
+            </div>
+            <div class="wbs-level-1">
+              <strong>5. Deployment (5 hari)</strong>
+              <ul>
+                <li>5.1 Server Setup - 2 hari</li>
+                <li>5.2 Production Deploy - 2 hari</li>
+                <li>5.3 Monitoring Setup - 1 hari</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section" id="pertDetail" style="display: none">
+          <div class="detail-header">
+            <h3><i class="fas fa-calculator"></i> PERT Estimation Detail</h3>
+            <button class="close-detail" onclick="closeDetail('pertDetail')">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="pert-table-container">
+            <table class="pert-table">
+              <thead>
+                <tr>
+                  <th>Aktivitas</th>
+                  <th>Optimistic (O)</th>
+                  <th>Most Likely (M)</th>
+                  <th>Pessimistic (P)</th>
+                  <th>Expected Time (TE)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Design & UI/UX</td>
+                  <td>10 hari</td>
+                  <td>12 hari</td>
+                  <td>16 hari</td>
+                  <td><strong>12.3 hari</strong></td>
+                </tr>
+                <tr class="critical-row">
+                  <td>Backend Development</td>
+                  <td>20 hari</td>
+                  <td>25 hari</td>
+                  <td>35 hari</td>
+                  <td><strong>25.8 hari</strong></td>
+                </tr>
+                <tr>
+                  <td>Frontend Development</td>
+                  <td>15 hari</td>
+                  <td>20 hari</td>
+                  <td>28 hari</td>
+                  <td><strong>20.5 hari</strong></td>
+                </tr>
+                <tr class="critical-row">
+                  <td>Testing & QA</td>
+                  <td>8 hari</td>
+                  <td>10 hari</td>
+                  <td>14 hari</td>
+                  <td><strong>10.3 hari</strong></td>
+                </tr>
+                <tr class="critical-row">
+                  <td>Deployment</td>
+                  <td>4 hari</td>
+                  <td>5 hari</td>
+                  <td>7 hari</td>
+                  <td><strong>5.2 hari</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table-note">
+              <i class="fas fa-info-circle"></i>
+              <span
+                >Baris berwarna merah menunjukkan aktivitas pada Critical
+                Path</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section" id="networkDetail" style="display: none">
+          <div class="detail-header">
+            <h3>
+              <i class="fas fa-project-diagram"></i> Network Diagram & Critical
+              Path
+            </h3>
+            <button class="close-detail" onclick="closeDetail('networkDetail')">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="network-summary">
+            <div class="critical-path-box">
+              <h4>Jalur Kritis Teridentifikasi:</h4>
+              <div class="path-visual">
+                <span class="path-node critical">Design</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="path-node critical">Backend Dev</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="path-node critical">Testing</span>
+                <i class="fas fa-arrow-right"></i>
+                <span class="path-node critical">Deployment</span>
+              </div>
+              <div class="path-duration">
+                <strong>Total Duration:</strong> 12 + 25 + 10 + 5 =
+                <span class="highlight">52 hari</span>
+              </div>
+            </div>
+            <div class="insights-grid">
+              <div class="insight-card">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>
+                  <strong>Backend Development</strong> adalah bottleneck
+                  terbesar (25 hari)
+                </p>
+              </div>
+              <div class="insight-card">
+                <i class="fas fa-users"></i>
+                <p>Frontend bisa parallel dengan Backend (Float: 5 hari)</p>
+              </div>
+              <div class="insight-card">
+                <i class="fas fa-stopwatch"></i>
+                <p>Delay pada critical path langsung impact total durasi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-section" id="ganttDetail" style="display: none">
+          <div class="detail-header">
+            <h3><i class="fas fa-chart-bar"></i> Gantt Chart Visualization</h3>
+            <button class="close-detail" onclick="closeDetail('ganttDetail')">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="gantt-preview">
+            <p class="preview-note">
+              Gantt Chart menampilkan timeline visual untuk komunikasi dengan
+              stakeholder
+            </p>
+            <div class="mini-gantt">
+              <div class="gantt-row">
+                <span class="task-name">Design</span>
+                <div
+                  class="gantt-bar critical-bar"
+                  style="left: 0%; width: 23%"
+                >
+                  Week 1-2
+                </div>
+              </div>
+              <div class="gantt-row">
+                <span class="task-name">Frontend</span>
+                <div class="gantt-bar normal-bar" style="left: 23%; width: 38%">
+                  Week 3-6
+                </div>
+              </div>
+              <div class="gantt-row">
+                <span class="task-name">Backend</span>
+                <div
+                  class="gantt-bar critical-bar"
+                  style="left: 23%; width: 48%"
+                >
+                  Week 3-7
+                </div>
+              </div>
+              <div class="gantt-row">
+                <span class="task-name">Testing</span>
+                <div
+                  class="gantt-bar critical-bar"
+                  style="left: 71%; width: 19%"
+                >
+                  Week 8-9
+                </div>
+              </div>
+              <div class="gantt-row">
+                <span class="task-name">Deploy</span>
+                <div
+                  class="gantt-bar critical-bar"
+                  style="left: 90%; width: 10%"
+                >
+                  Week 10
+                </div>
+              </div>
+            </div>
+            <div class="gantt-legend-mini">
+              <span
+                ><div class="legend-box critical-box"></div>
+                Critical Path</span
+              >
+              <span
+                ><div class="legend-box normal-box"></div>
+                Normal Task</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Findings -->
+        <div class="key-findings animate-fade-in delay-2">
+          <h2 class="section-title">
+            <i class="fas fa-search"></i>
+            Key Findings dari Analisis
+          </h2>
+
+          <div class="findings-grid">
+            <div class="finding-card">
+              <div class="finding-number">1</div>
+              <h4>Critical Path Identification</h4>
+              <p>
+                Jalur kritis: Design → Backend → Testing → Deployment (52 hari).
+                Fokus monitoring pada aktivitas ini.
+              </p>
+            </div>
+
+            <div class="finding-card">
+              <div class="finding-number">2</div>
+              <h4>Parallelization Opportunity</h4>
+              <p>
+                Frontend dapat dikerjakan parallel dengan Backend, menghemat
+                total waktu proyek.
+              </p>
+            </div>
+
+            <div class="finding-card">
+              <div class="finding-number">3</div>
+              <h4>Resource Optimization</h4>
+              <p>
+                Backend team adalah critical resource. Pertimbangkan menambah
+                developer jika ada delay.
+              </p>
+            </div>
+
+            <div class="finding-card">
+              <div class="finding-number">4</div>
+              <h4>Risk Mitigation</h4>
+              <p>
+                Buffer time 10% direkomendasikan pada critical path activities
+                untuk handle uncertainty.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Success Metrics -->
+        <div class="success-metrics animate-slide-up delay-3">
+          <h2 class="section-title">
+            <i class="fas fa-trophy"></i>
+            Success Metrics
+          </h2>
+
+          <div class="metrics-grid">
+            <div class="metric-card on-time">
+              <i class="fas fa-clock"></i>
+              <div class="metric-value">52 hari</div>
+              <div class="metric-label">Estimated Duration</div>
+              <div class="metric-status">On Schedule</div>
+            </div>
+
+            <div class="metric-card on-budget">
+              <i class="fas fa-dollar-sign"></i>
+              <div class="metric-value">100%</div>
+              <div class="metric-label">Budget Allocation</div>
+              <div class="metric-status">Within Budget</div>
+            </div>
+
+            <div class="metric-card quality">
+              <i class="fas fa-check-circle"></i>
+              <div class="metric-value">17</div>
+              <div class="metric-label">Work Packages</div>
+              <div class="metric-status">Well-Defined</div>
+            </div>
+
+            <div class="metric-card team">
+              <i class="fas fa-users"></i>
+              <div class="metric-value">12</div>
+              <div class="metric-label">Team Members</div>
+              <div class="metric-status">Allocated</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="case-conclusion animate-fade-in delay-4">
+          <div class="conclusion-box">
+            <i class="fas fa-lightbulb"></i>
+            <div>
+              <h3>Kesimpulan Studi Kasus</h3>
+              <p>
+                Dengan mengintegrasikan
+                <strong>WBS, PERT, Network Diagram, dan Gantt Chart</strong>
+                melalui metodologi PRIME, proyek e-commerce dapat direncanakan
+                dengan detail yang comprehensive. Critical path analysis
+                membantu focus pada aktivitas kunci, sementara Gantt Chart
+                memberikan visualisasi yang jelas untuk komunikasi stakeholder.
+                Kombinasi ini menghasilkan
+                <strong>perencanaan yang solid dan executable</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Menu -->
+    <div class="slide-menu" id="slideMenu">
+      <div class="menu-header">
+        <h3>Daftar Materi</h3>
+        <button class="close-menu" onclick="toggleMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="menu-items">
+        <li class="menu-item">
+          <a href="index.html"
+            ><span class="menu-item-number">0</span
+            ><span>Cover - Penjadwalan Proyek</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi1.html"
+            ><span class="menu-item-number">1</span
+            ><span>Pengenalan Penjadwalan</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi2.html"
+            ><span class="menu-item-number">2</span
+            ><span>Langkah Awal Penjadwalan</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi3.html"
+            ><span class="menu-item-number">3</span
+            ><span>Work Breakdown Structure</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi4.html"
+            ><span class="menu-item-number">4</span
+            ><span>Metode Penjadwalan</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi5.html"
+            ><span class="menu-item-number">5</span><span>Gantt Chart</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi6.html"
+            ><span class="menu-item-number">6</span
+            ><span>Network Diagram</span></a
+          >
+        </li>
+        <li class="menu-item active">
+          <a href="materi7.html"
+            ><span class="menu-item-number">7</span
+            ><span>Studi Kasus E-Commerce</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi8.html"
+            ><span class="menu-item-number">8</span
+            ><span>Kesimpulan & Penutup</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") window.location.href = "materi6.html";
+        else if (e.key === "ArrowRight" || e.key === " ") {
+          e.preventDefault();
+          window.location.href = "materi8.html";
+        } else if (e.key === "m" || e.key === "M") toggleMenu();
+        else if (e.key === "Escape")
+          document.getElementById("slideMenu").classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

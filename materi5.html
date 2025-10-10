@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIME - Gantt Chart</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="slide-styles.css" />
+  </head>
+  <body class="slide-page">
+    <!-- Menu Button -->
+    <button class="menu-button" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+      <div class="slide-number">Slide 6 / 9</div>
+      <div class="nav-arrows">
+        <button class="nav-arrow prev" onclick="location.href='materi4.html'">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow next" onclick="location.href='materi6.html'">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Slide Content -->
+    <div class="slide-container">
+      <div class="slide-content gantt-slide">
+        <div class="slide-header">
+          <h1 class="slide-title">
+            <i class="fas fa-chart-bar"></i>
+            Gantt Chart
+          </h1>
+          <p class="slide-subtitle">Visual Timeline untuk Manajemen Proyek</p>
+        </div>
+
+        <!-- Definition & Overview -->
+        <div class="gantt-overview">
+          <div class="overview-card definition-card animate-fade-in">
+            <div class="card-header">
+              <i class="fas fa-book"></i>
+              <h3>Definisi Gantt Chart</h3>
+            </div>
+            <p>
+              Gantt Chart adalah <strong>alat visual</strong> yang menampilkan
+              jadwal proyek dalam bentuk
+              <strong>bar horizontal</strong> sepanjang timeline, menunjukkan
+              durasi, start date, end date, dan progress setiap aktivitas.
+            </p>
+            <div class="history-note">
+              <i class="fas fa-history"></i>
+              <small>Dikembangkan oleh Henry Gantt tahun 1910-an</small>
+            </div>
+          </div>
+
+          <div class="pros-cons-grid">
+            <div class="pros-card animate-slide-left delay-1">
+              <div class="card-icon pros">
+                <i class="fas fa-thumbs-up"></i>
+              </div>
+              <h3>Kelebihan</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Visual yang mudah dipahami</li>
+                <li>
+                  <i class="fas fa-check"></i> Timeline jelas dan intuitif
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Progress tracking sederhana
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Ideal untuk presentasi
+                  stakeholder
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Milestone mudah diidentifikasi
+                </li>
+              </ul>
+            </div>
+
+            <div class="cons-card animate-slide-right delay-1">
+              <div class="card-icon cons">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+              <h3>Kekurangan</h3>
+              <ul>
+                <li>
+                  <i class="fas fa-times"></i> Dependencies tidak eksplisit
+                </li>
+                <li>
+                  <i class="fas fa-times"></i> Sulit menunjukkan hubungan antar
+                  tugas
+                </li>
+                <li><i class="fas fa-times"></i> Critical path tidak jelas</li>
+                <li>
+                  <i class="fas fa-times"></i> Kurang detail untuk analisis
+                  mendalam
+                </li>
+                <li>
+                  <i class="fas fa-times"></i> Kompleks untuk proyek besar
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anatomy of Gantt Chart -->
+        <div class="gantt-anatomy animate-slide-up delay-2">
+          <h2 class="section-title">
+            <i class="fas fa-microscope"></i>
+            Anatomi Gantt Chart
+          </h2>
+
+          <div class="anatomy-grid">
+            <div class="anatomy-item">
+              <div class="anatomy-icon">
+                <i class="fas fa-grip-horizontal"></i>
+              </div>
+              <h4>Task Bar (Balok Tugas)</h4>
+              <p>
+                Bar horizontal yang menunjukkan durasi dan posisi waktu
+                aktivitas (tanpa progress)
+              </p>
+              <div class="example-task-bar-wrapper">
+                <div class="example-task-bar">
+                  <span class="example-task-label">Design Phase - 2 weeks</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="anatomy-item">
+              <div class="anatomy-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h4>Timeline (Sumbu Waktu)</h4>
+              <p>
+                Sumbu horizontal menunjukkan rentang waktu proyek (hari, minggu,
+                bulan)
+              </p>
+              <div class="example-timeline">
+                <span>Week 1</span>
+                <span>Week 2</span>
+                <span>Week 3</span>
+                <span>Week 4</span>
+              </div>
+            </div>
+
+            <div class="anatomy-item">
+              <div class="anatomy-icon">
+                <i class="fas fa-flag"></i>
+              </div>
+              <h4>Milestone</h4>
+              <p>
+                Titik penting atau pencapaian kunci dalam proyek (biasanya
+                diamond/rhombus)
+              </p>
+              <div class="example-milestone-bar">
+                <div class="milestone-bar">
+                  <span>Testing Phase</span>
+                </div>
+                <div class="milestone-marker-demo">
+                  <i class="fas fa-flag"></i>
+                  <span>Launch</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="anatomy-item">
+              <div class="anatomy-icon">
+                <i class="fas fa-percentage"></i>
+              </div>
+              <h4>Progress Bar</h4>
+              <p>
+                Bar dengan indikator persentase penyelesaian tugas yang
+                berubah-ubah
+              </p>
+              <div class="example-progress-wrapper">
+                <div class="example-progress-bar">
+                  <div class="example-progress-fill">
+                    <span class="example-progress-text">25%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Gantt Chart Simulator -->
+        <div class="gantt-simulator animate-fade-in delay-3">
+          <h2 class="section-title">
+            <i class="fas fa-play-circle"></i>
+            Simulasi Gantt Chart Interaktif
+          </h2>
+          <p class="simulator-desc">
+            <strong>Cara Penggunaan:</strong><br />
+            1. Klik <strong>"Animate Progress"</strong> untuk melihat animasi
+            progress bar dari 0% hingga 100%<br />
+            2. Klik <strong>"Reset"</strong> untuk mengembalikan semua progress
+            ke 0%<br />
+            3. Klik <strong>"Toggle Critical Path"</strong> untuk highlight
+            tugas-tugas kritis (berwarna merah)
+          </p>
+
+          <div
+            class="gantt-controls"
+            style="
+              opacity: 1 !important;
+              pointer-events: auto !important;
+              position: relative;
+              z-index: 9999;
+            "
+          >
+            <button
+              class="control-btn"
+              onclick="animateGantt(); console.log('Button 1 clicked');"
+              style="
+                cursor: pointer !important;
+                pointer-events: auto !important;
+              "
+            >
+              <i class="fas fa-play"></i> Animate Progress
+            </button>
+            <button
+              class="control-btn"
+              onclick="resetGantt(); console.log('Button 2 clicked');"
+              style="
+                cursor: pointer !important;
+                pointer-events: auto !important;
+              "
+            >
+              <i class="fas fa-redo"></i> Reset
+            </button>
+            <button
+              class="control-btn"
+              onclick="toggleCriticalPath(event); console.log('Button 3 clicked');"
+              style="
+                cursor: pointer !important;
+                pointer-events: auto !important;
+              "
+            >
+              <i class="fas fa-exclamation-circle"></i> Toggle Critical Path
+            </button>
+          </div>
+
+          <div class="gantt-chart-container">
+            <!-- Timeline Header -->
+            <div class="gantt-timeline">
+              <div class="timeline-header">Task / Timeline</div>
+              <div class="timeline-dates">
+                <span>Week 1</span>
+                <span>Week 2</span>
+                <span>Week 3</span>
+                <span>Week 4</span>
+                <span>Week 5</span>
+                <span>Week 6</span>
+                <span>Week 7</span>
+                <span>Week 8</span>
+                <span>Week 9</span>
+                <span>Week 10</span>
+              </div>
+            </div>
+
+            <!-- Gantt Rows -->
+            <div class="gantt-rows">
+    <div class="gantt-row critical" data-task="design">
+        <div class="task-label">
+            <i class="fas fa-paint-brush"></i>
+            <span>Design & UI/UX</span>
+        </div>
+        <div class="gantt-bar-container">
+            <div
+                class="gantt-bar"
+                style="left: 0%; width: 15%"
+                data-progress="0"
+            >
+                <div class="bar-progress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gantt-row critical" data-task="frontend">
+        <div class="task-label">
+            <i class="fas fa-code"></i>
+            <span>Frontend Development</span>
+        </div>
+        <div class="gantt-bar-container">
+            <div
+                class="gantt-bar"
+                style="left: 0%; width: 35%"
+                data-progress="0"
+            >
+                <div class="bar-progress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gantt-row" data-task="backend">
+        <div class="task-label">
+            <i class="fas fa-server"></i>
+            <span>Backend Development</span>
+        </div>
+        <div class="gantt-bar-container">
+            <div
+                class="gantt-bar"
+                style="left: 0%; width: 60%"
+                data-progress="0"
+            >
+                <div class="bar-progress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gantt-row critical" data-task="testing">
+        <div class="task-label">
+            <i class="fas fa-vial"></i>
+            <span>Testing & QA</span>
+        </div>
+        <div class="gantt-bar-container">
+            <div
+                class="gantt-bar"
+                style="left: 0%; width: 45%"
+                data-progress="0"
+            >
+                <div class="bar-progress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gantt-row critical" data-task="deployment">
+        <div class="task-label">
+            <i class="fas fa-rocket"></i>
+            <span>Deployment</span>
+        </div>
+        <div class="gantt-bar-container">
+            <div
+                class="gantt-bar"
+                style="left: 0%; width: 70%"
+                data-progress="0"
+            >
+                <div class="bar-progress" style="width: 0%"></div>
+                <div
+                    class="milestone"
+                    style="
+                        position: absolute;
+                        right: -15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    "
+                >
+                    <i class="fas fa-flag"></i>
+                    <span class="milestone-label">Launch</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gantt-row" data-task="docs">
+        <div class="task-label">
+            <i class="fas fa-book"></i>
+            <span>Documentation</span>
+        </div>
+        <div class="gantt-bar-container">
+            <div
+                class="gantt-bar"
+                style="left: 0%; width: 50%"
+                data-progress="0"
+            >
+                <div class="bar-progress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+          <div class="gantt-legend">
+            <div class="legend-item">
+              <div class="legend-color normal"></div>
+              <span>Normal Task (Purple)</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color critical"></div>
+              <span>Critical Path (Red)</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color completed"></div>
+              <span>Completed (Green)</span>
+            </div>
+            <div class="legend-item">
+              <i class="fas fa-flag milestone-icon"></i>
+              <span>Milestone (Yellow Flag)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Points -->
+        <div class="key-points animate-slide-up delay-4">
+          <h3>
+            <i class="fas fa-lightbulb"></i> Kapan Menggunakan Gantt Chart?
+          </h3>
+          <div class="points-grid">
+            <div class="point-card">
+              <i class="fas fa-users"></i>
+              <h4>Komunikasi Stakeholder</h4>
+              <p>
+                Ideal untuk presentasi ke client, management, atau tim
+                non-teknis
+              </p>
+            </div>
+            <div class="point-card">
+              <i class="fas fa-chart-line"></i>
+              <h4>Progress Tracking</h4>
+              <p>Monitoring perkembangan proyek secara visual dan real-time</p>
+            </div>
+            <div class="point-card">
+              <i class="fas fa-calendar-check"></i>
+              <h4>Timeline Planning</h4>
+              <p>Perencanaan jadwal dengan dependencies sederhana</p>
+            </div>
+            <div class="point-card">
+              <i class="fas fa-clipboard-list"></i>
+              <h4>Resource Allocation</h4>
+              <p>Visualisasi alokasi tim dan workload per periode</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Menu -->
+    <div class="slide-menu" id="slideMenu">
+      <div class="menu-header">
+        <h3>Daftar Materi</h3>
+        <button class="close-menu" onclick="toggleMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="menu-items">
+        <li class="menu-item">
+          <a href="index.html"
+            ><span class="menu-item-number">0</span
+            ><span>Cover - Penjadwalan Proyek</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi1.html"
+            ><span class="menu-item-number">1</span
+            ><span>Pengenalan Penjadwalan</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi2.html"
+            ><span class="menu-item-number">2</span
+            ><span>Langkah Awal Penjadwalan</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi3.html"
+            ><span class="menu-item-number">3</span
+            ><span>Work Breakdown Structure</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi4.html"
+            ><span class="menu-item-number">4</span
+            ><span>Metode Penjadwalan</span></a
+          >
+        </li>
+        <li class="menu-item active">
+          <a href="materi5.html"
+            ><span class="menu-item-number">5</span><span>Gantt Chart</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi6.html"
+            ><span class="menu-item-number">6</span
+            ><span>Network Diagram</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi7.html"
+            ><span class="menu-item-number">7</span
+            ><span>Studi Kasus E-Commerce</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="materi8.html"
+            ><span class="menu-item-number">8</span
+            ><span>Kesimpulan & Penutup</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Test if functions are loaded
+      console.log("Script loaded");
+      console.log("animateGantt:", typeof animateGantt);
+      console.log("resetGantt:", typeof resetGantt);
+      console.log("toggleCriticalPath:", typeof toggleCriticalPath);
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") window.location.href = "materi4.html";
+        else if (e.key === "ArrowRight" || e.key === " ") {
+          e.preventDefault();
+          window.location.href = "materi6.html";
+        } else if (e.key === "m" || e.key === "M") toggleMenu();
+        else if (e.key === "Escape")
+          document.getElementById("slideMenu").classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
