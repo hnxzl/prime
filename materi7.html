@@ -325,7 +325,7 @@
           </div>
         </div>
 
-        <div class="detail-section" id="ganttDetail" style="display: none">
+        <div class="detail-section" id="ganttDetail" style="display: block !important;">
           <div class="detail-header">
             <h3><i class="fas fa-chart-bar"></i> Gantt Chart Visualization</h3>
             <button class="close-detail" onclick="closeDetail('ganttDetail')">
@@ -338,46 +338,64 @@
               stakeholder
             </p>
             <div class="mini-gantt">
-              <div class="gantt-row">
-                <span class="task-name">Design</span>
-                <div
-                  class="gantt-bar critical-bar"
-                  style="left: 0%; width: 23%"
-                >
-                  Week 1-2
+              <!-- Timeline Header -->
+              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 20px; border-bottom: 3px solid #2d3436; padding-bottom: 15px;">
+                <div style="width: 150px"></div>
+                <div style="text-align: center; font-weight: 700; color: #667eea; padding: 8px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 5px;">Week 1-2</div>
+                <div style="text-align: center; font-weight: 700; color: #667eea; padding: 8px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 5px;">Week 3-4</div>
+                <div style="text-align: center; font-weight: 700; color: #667eea; padding: 8px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 5px;">Week 5-6</div>
+                <div style="text-align: center; font-weight: 700; color: #667eea; padding: 8px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 5px;">Week 7-8</div>
+                <div style="text-align: center; font-weight: 700; color: #667eea; padding: 8px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 5px;">Week 9-10</div>
+              </div>
+
+              <!-- Gantt Rows with Grid -->
+              <!-- Design: Week 1-2 (full column 1, 20% of column 2) -->
+              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 15px; align-items: center;">
+                <div style="font-weight: bold; color: #2d3436; padding: 10px;">Design</div>
+                <div style="grid-column: 2 / 3; padding: 5px;">
+                  <div style="width: 100%; background: linear-gradient(135deg, #d63031, #e74c3c); height: 40px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; border: 2px solid #2d3436; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
+                    12 hari
+                  </div>
                 </div>
               </div>
-              <div class="gantt-row">
-                <span class="task-name">Frontend</span>
-                <div class="gantt-bar normal-bar" style="left: 23%; width: 38%">
-                  Week 3-6
+              
+              <!-- Frontend: Week 2-5 (column 2-4) -->
+              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 15px; align-items: center;">
+                <div style="font-weight: bold; color: #2d3436; padding: 10px;">Frontend</div>
+                <div style="grid-column: 2 / 5; padding: 5px;">
+                  <div style="width: 100%; background: linear-gradient(135deg, #667eea, #764ba2); height: 40px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; border: 2px solid #2d3436; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
+                    20 hari
+                  </div>
                 </div>
               </div>
-              <div class="gantt-row">
-                <span class="task-name">Backend</span>
-                <div
-                  class="gantt-bar critical-bar"
-                  style="left: 23%; width: 48%"
-                >
-                  Week 3-7
+              
+              <!-- Backend: Week 2-7 (column 2-5) -->
+              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 15px; align-items: center;">
+                <div style="font-weight: bold; color: #2d3436; padding: 10px;">Backend</div>
+                <div style="grid-column: 2 / 6; padding: 5px;">
+                  <div style="width: 100%; background: linear-gradient(135deg, #d63031, #e74c3c); height: 40px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; border: 2px solid #2d3436; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
+                    25 hari
+                  </div>
                 </div>
               </div>
-              <div class="gantt-row">
-                <span class="task-name">Testing</span>
-                <div
-                  class="gantt-bar critical-bar"
-                  style="left: 71%; width: 19%"
-                >
-                  Week 8-9
+              
+              <!-- Testing: Week 8-9 (column 5) -->
+              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 15px; align-items: center;">
+                <div style="font-weight: bold; color: #2d3436; padding: 10px;">Testing</div>
+                <div style="grid-column: 5 / 6; padding: 5px;">
+                  <div style="width: 100%; background: linear-gradient(135deg, #d63031, #e74c3c); height: 40px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; border: 2px solid #2d3436; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
+                    10 hari
+                  </div>
                 </div>
               </div>
-              <div class="gantt-row">
-                <span class="task-name">Deploy</span>
-                <div
-                  class="gantt-bar critical-bar"
-                  style="left: 90%; width: 10%"
-                >
-                  Week 10
+              
+              <!-- Deploy: Week 10 (column 6) -->
+              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 15px; align-items: center;">
+                <div style="font-weight: bold; color: #2d3436; padding: 10px;">Deploy</div>
+                <div style="grid-column: 6 / 7; padding: 5px;">
+                  <div style="width: 100%; background: linear-gradient(135deg, #d63031, #e74c3c); height: 40px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; border: 2px solid #2d3436; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
+                    5 hari
+                  </div>
                 </div>
               </div>
             </div>
