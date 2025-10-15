@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PRIME - Studi Kasus E-commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="logo.ico" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -325,7 +330,11 @@
           </div>
         </div>
 
-        <div class="detail-section" id="ganttDetail" style="display: block !important;">
+        <div
+          class="detail-section"
+          id="ganttDetail"
+          style="display: block !important"
+        >
           <div class="detail-header">
             <h3><i class="fas fa-chart-bar"></i> Gantt Chart Visualization</h3>
             <button class="close-detail" onclick="closeDetail('ganttDetail')">
@@ -339,61 +348,265 @@
             </p>
             <div class="mini-gantt">
               <!-- Timeline Header -->
-              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 20px; border-bottom: 3px solid #2d3436; padding-bottom: 15px;">
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 150px repeat(5, 1fr);
+                  gap: 0;
+                  margin-bottom: 20px;
+                  border-bottom: 3px solid #2d3436;
+                  padding-bottom: 15px;
+                "
+              >
                 <div style="width: 150px"></div>
-                <div style="text-align: center; font-weight: 700; color: #667eea; padding: 8px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 5px;">Week 1-2</div>
-                <div style="text-align: center; font-weight: 700; color: #667eea; padding: 8px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 5px;">Week 3-4</div>
-                <div style="text-align: center; font-weight: 700; color: #667eea; padding: 8px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 5px;">Week 5-6</div>
-                <div style="text-align: center; font-weight: 700; color: #667eea; padding: 8px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 5px;">Week 7-8</div>
-                <div style="text-align: center; font-weight: 700; color: #667eea; padding: 8px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 5px;">Week 9-10</div>
+                <div
+                  style="
+                    text-align: center;
+                    font-weight: 700;
+                    color: #667eea;
+                    padding: 8px;
+                    background: linear-gradient(
+                      135deg,
+                      rgba(102, 126, 234, 0.1),
+                      rgba(118, 75, 162, 0.1)
+                    );
+                    border-radius: 5px;
+                  "
+                >
+                  Week 1-2
+                </div>
+                <div
+                  style="
+                    text-align: center;
+                    font-weight: 700;
+                    color: #667eea;
+                    padding: 8px;
+                    background: linear-gradient(
+                      135deg,
+                      rgba(102, 126, 234, 0.1),
+                      rgba(118, 75, 162, 0.1)
+                    );
+                    border-radius: 5px;
+                  "
+                >
+                  Week 3-4
+                </div>
+                <div
+                  style="
+                    text-align: center;
+                    font-weight: 700;
+                    color: #667eea;
+                    padding: 8px;
+                    background: linear-gradient(
+                      135deg,
+                      rgba(102, 126, 234, 0.1),
+                      rgba(118, 75, 162, 0.1)
+                    );
+                    border-radius: 5px;
+                  "
+                >
+                  Week 5-6
+                </div>
+                <div
+                  style="
+                    text-align: center;
+                    font-weight: 700;
+                    color: #667eea;
+                    padding: 8px;
+                    background: linear-gradient(
+                      135deg,
+                      rgba(102, 126, 234, 0.1),
+                      rgba(118, 75, 162, 0.1)
+                    );
+                    border-radius: 5px;
+                  "
+                >
+                  Week 7-8
+                </div>
+                <div
+                  style="
+                    text-align: center;
+                    font-weight: 700;
+                    color: #667eea;
+                    padding: 8px;
+                    background: linear-gradient(
+                      135deg,
+                      rgba(102, 126, 234, 0.1),
+                      rgba(118, 75, 162, 0.1)
+                    );
+                    border-radius: 5px;
+                  "
+                >
+                  Week 9-10
+                </div>
               </div>
 
               <!-- Gantt Rows with Grid -->
               <!-- Design: Week 1-2 (full column 1, 20% of column 2) -->
-              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 15px; align-items: center;">
-                <div style="font-weight: bold; color: #2d3436; padding: 10px;">Design</div>
-                <div style="grid-column: 2 / 3; padding: 5px;">
-                  <div style="width: 100%; background: linear-gradient(135deg, #d63031, #e74c3c); height: 40px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; border: 2px solid #2d3436; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 150px repeat(5, 1fr);
+                  gap: 0;
+                  margin-bottom: 15px;
+                  align-items: center;
+                "
+              >
+                <div style="font-weight: bold; color: #2d3436; padding: 10px">
+                  Design
+                </div>
+                <div style="grid-column: 2 / 3; padding: 5px">
+                  <div
+                    style="
+                      width: 100%;
+                      background: linear-gradient(135deg, #d63031, #e74c3c);
+                      height: 40px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      border-radius: 10px;
+                      border: 2px solid #2d3436;
+                      font-weight: bold;
+                      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+                    "
+                  >
                     12 hari
                   </div>
                 </div>
               </div>
-              
+
               <!-- Frontend: Week 2-5 (column 2-4) -->
-              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 15px; align-items: center;">
-                <div style="font-weight: bold; color: #2d3436; padding: 10px;">Frontend</div>
-                <div style="grid-column: 2 / 5; padding: 5px;">
-                  <div style="width: 100%; background: linear-gradient(135deg, #667eea, #764ba2); height: 40px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; border: 2px solid #2d3436; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 150px repeat(5, 1fr);
+                  gap: 0;
+                  margin-bottom: 15px;
+                  align-items: center;
+                "
+              >
+                <div style="font-weight: bold; color: #2d3436; padding: 10px">
+                  Frontend
+                </div>
+                <div style="grid-column: 2 / 5; padding: 5px">
+                  <div
+                    style="
+                      width: 100%;
+                      background: linear-gradient(135deg, #667eea, #764ba2);
+                      height: 40px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      border-radius: 10px;
+                      border: 2px solid #2d3436;
+                      font-weight: bold;
+                      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+                    "
+                  >
                     20 hari
                   </div>
                 </div>
               </div>
-              
+
               <!-- Backend: Week 2-7 (column 2-5) -->
-              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 15px; align-items: center;">
-                <div style="font-weight: bold; color: #2d3436; padding: 10px;">Backend</div>
-                <div style="grid-column: 2 / 6; padding: 5px;">
-                  <div style="width: 100%; background: linear-gradient(135deg, #d63031, #e74c3c); height: 40px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; border: 2px solid #2d3436; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 150px repeat(5, 1fr);
+                  gap: 0;
+                  margin-bottom: 15px;
+                  align-items: center;
+                "
+              >
+                <div style="font-weight: bold; color: #2d3436; padding: 10px">
+                  Backend
+                </div>
+                <div style="grid-column: 2 / 6; padding: 5px">
+                  <div
+                    style="
+                      width: 100%;
+                      background: linear-gradient(135deg, #d63031, #e74c3c);
+                      height: 40px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      border-radius: 10px;
+                      border: 2px solid #2d3436;
+                      font-weight: bold;
+                      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+                    "
+                  >
                     25 hari
                   </div>
                 </div>
               </div>
-              
+
               <!-- Testing: Week 8-9 (column 5) -->
-              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 15px; align-items: center;">
-                <div style="font-weight: bold; color: #2d3436; padding: 10px;">Testing</div>
-                <div style="grid-column: 5 / 6; padding: 5px;">
-                  <div style="width: 100%; background: linear-gradient(135deg, #d63031, #e74c3c); height: 40px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; border: 2px solid #2d3436; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 150px repeat(5, 1fr);
+                  gap: 0;
+                  margin-bottom: 15px;
+                  align-items: center;
+                "
+              >
+                <div style="font-weight: bold; color: #2d3436; padding: 10px">
+                  Testing
+                </div>
+                <div style="grid-column: 5 / 6; padding: 5px">
+                  <div
+                    style="
+                      width: 100%;
+                      background: linear-gradient(135deg, #d63031, #e74c3c);
+                      height: 40px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      border-radius: 10px;
+                      border: 2px solid #2d3436;
+                      font-weight: bold;
+                      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+                    "
+                  >
                     10 hari
                   </div>
                 </div>
               </div>
-              
+
               <!-- Deploy: Week 10 (column 6) -->
-              <div style="display: grid; grid-template-columns: 150px repeat(5, 1fr); gap: 0; margin-bottom: 15px; align-items: center;">
-                <div style="font-weight: bold; color: #2d3436; padding: 10px;">Deploy</div>
-                <div style="grid-column: 6 / 7; padding: 5px;">
-                  <div style="width: 100%; background: linear-gradient(135deg, #d63031, #e74c3c); height: 40px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 10px; border: 2px solid #2d3436; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.2);">
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 150px repeat(5, 1fr);
+                  gap: 0;
+                  margin-bottom: 15px;
+                  align-items: center;
+                "
+              >
+                <div style="font-weight: bold; color: #2d3436; padding: 10px">
+                  Deploy
+                </div>
+                <div style="grid-column: 6 / 7; padding: 5px">
+                  <div
+                    style="
+                      width: 100%;
+                      background: linear-gradient(135deg, #d63031, #e74c3c);
+                      height: 40px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      color: white;
+                      border-radius: 10px;
+                      border: 2px solid #2d3436;
+                      font-weight: bold;
+                      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+                    "
+                  >
                     5 hari
                   </div>
                 </div>
@@ -595,5 +808,17 @@
           document.getElementById("slideMenu").classList.remove("active");
       });
     </script>
+
+    <!-- Mobile Navigation Buttons -->
+    <div class="mobile-nav-buttons">
+      <a href="materi6.html" class="mobile-nav-btn mobile-nav-prev">
+        <i class="fas fa-chevron-left"></i>
+        <span>Sebelumnya</span>
+      </a>
+      <a href="materi8.html" class="mobile-nav-btn mobile-nav-next">
+        <span>Selanjutnya</span>
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
   </body>
 </html>

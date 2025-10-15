@@ -6178,3 +6178,57 @@ body {
   border: 3px solid #2d3436;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+
+/* ===== Mobile Navigation Buttons ===== */
+.mobile-nav-buttons {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 999;
+    gap: 15px;
+  }
+
+  .mobile-nav-btn {
+    flex: 1;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 2px solid #2d3436;
+  }
+
+  .mobile-nav-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+  }
+
+  .mobile-nav-prev {
+    background: linear-gradient(135deg, #6c757d, #495057);
+  }
+
+  .mobile-nav-next {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+
+  .mobile-nav-btn i {
+    font-size: 1.2rem;
+  }
+}
